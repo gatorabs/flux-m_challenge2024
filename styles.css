@@ -1,0 +1,223 @@
+
+.e1 { 
+	width:454px;
+	height:601px;
+	position:absolute;
+}
+.e2 { 
+	width:359px;
+	height:495px;
+	position:absolute;
+	left:95px;
+	top:106px;
+}
+
+.line { 
+	transform: rotate(90.1789619077864deg);
+	width:350;
+	height:0px;
+	position:absolute;
+	left:-100px;
+	top:270px;
+	border: 3px solid white;
+
+}
+
+.black-retangule { 
+	background-color:rgba(0, 0, 0, 1);
+	width:360px;
+	height:496px;
+	position:absolute;
+	left:-1px;
+	top:-1px;
+	border-top-left-radius:7px;
+	border-top-right-radius:7px;
+	border-bottom-left-radius:7px;
+	border-bottom-right-radius:7px;
+}
+
+
+.truck-icon { 
+	width:50px;
+	height:50px;
+	position:absolute;
+	left:23px;
+	top:13px;
+	background-image:url(images/truck.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+.temperature { 
+	width:102px;
+	height:47px;
+	position:absolute;
+	left:96px;
+	top:122px;
+}
+.temperature-data { 
+	color:rgba(255, 255, 255, 1);
+	width:45px;
+	height:24px;
+	position:absolute;
+	left:57px;
+	top:12px;
+	font-family:Inria Sans;
+	text-align:left;
+	font-size:20px;
+	letter-spacing:0;
+}
+.temperature-retangule { 
+	background-color:rgba(32.00000189244747, 41.00000135600567, 120.00000044703484, 1);
+	width:50px;
+	height:50px;
+	position:absolute;
+	left:-3px;
+	top:-1px;
+	border-top-left-radius:6px;
+	border-top-right-radius:6px;
+	border-bottom-left-radius:6px;
+	border-bottom-right-radius:6px;
+}
+.temperature-icon { 
+	width:46px;
+	height:45px;
+	position:absolute;
+	left:-1px;
+	top:2px;
+	background-image:url(images/temperature.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+.humidity { 
+	width:102px;
+	height:46px;
+	position:absolute;
+	left:93px;
+	top:208px;
+}
+.humidity-data { 
+	color:rgba(255, 255, 255, 1);
+	width:40px;
+	height:24px;
+	position:absolute;
+	left:60px;
+	top:9px;
+	font-family:Inria Sans;
+	text-align:left;
+	font-size:20px;
+	letter-spacing:0;
+}
+.humidity-retangule { 
+	background-color:rgba(32.00000189244747, 41.00000135600567, 120.00000044703484, 1);
+	width:50px;
+	height:50px;
+	position:absolute;
+	left:0px;
+	top:-4px;
+	border-top-left-radius:6px;
+	border-top-right-radius:6px;
+	border-bottom-left-radius:6px;
+	border-bottom-right-radius:6px;
+}
+.humidity-icon { 
+	width:41px;
+	height:44px;
+	position:absolute;
+	left:5px;
+	top:-1px;
+	background-image:url(images/gota.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+.fuel { 
+	width:105px;
+	height:49px;
+	position:absolute;
+	left:93px;
+	top:284px;
+}
+.fuel-data { 
+	color:rgba(255, 255, 255, 1);
+	width:39px;
+	height:24px;
+	position:absolute;
+	left:60px;
+	top:12px;
+	font-family:Inria Sans;
+	text-align:left;
+	font-size:20px;
+	letter-spacing:0;
+}
+.fuel-retangule { 
+	background-color:rgba(32.00000189244747, 41.00000135600567, 120.00000044703484, 1);
+	width:50px;
+	height:50px;
+	position:absolute;
+	left:0px;
+	top:-1px;
+	border-top-left-radius:6px;
+	border-top-right-radius:6px;
+	border-bottom-left-radius:6px;
+	border-bottom-right-radius:6px;
+}
+.fuel-icon { 
+	width:30px;
+	height:35px;
+	position:absolute;
+	left:10px;
+	top:6px;
+	background-image:url(images/fuel.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+.oil { 
+	width:105px;
+	height:49px;
+	position:absolute;
+	left:93px;
+	top:370px;
+}
+.oil-retangule { 
+	background-color:rgba(32.00000189244747, 41.00000135600567, 120.00000044703484, 1);
+	width:50px;
+	height:50px;
+	position:absolute;
+	left:0px;
+	top:-1px;
+	border-top-left-radius:6px;
+	border-top-right-radius:6px;
+	border-bottom-left-radius:6px;
+	border-bottom-right-radius:6px;
+}
+.oil-icon { 
+	width:33px;
+	height:35px;
+	position:absolute;
+	left:9px;
+	top:6px;
+	background-image:url(images/oil.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+.oil-data { 
+	color:rgba(255, 255, 255, 1);
+	width:42px;
+	height:24px;
+	position:absolute;
+	left:60px;
+	top:12px;
+	font-family:Inria Sans;
+	text-align:left;
+	font-size:20px;
+	letter-spacing:0;
+}
+.scania-logo { 
+	width:81px;
+	height:81px;
+	position:absolute;
+	left:2px;
+	top:-7px;
+	background-image:url(images/scania.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
