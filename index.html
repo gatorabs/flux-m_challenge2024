@@ -1,51 +1,102 @@
 <html lang="en">
-
+ 
 <head>
   <meta charset="utf-8">
-
+ 
   <title>Flux-m</title>
-  
+ 
   <link href="https://fonts.googleapis.com/css?family=Inria+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-
+ 
   <style>
     body {
       background: #E5E5E5;
     }
   </style>
-
+ 
 </head>
-
+ 
 <body>
   <div class=e1>
     <div class=e2>
-      
-
+     
+ 
       <div class="black-retangule"></div>
-      
+     
       <div class="truck-icon"></div>
       <div class="line"></div>
-      <div class="temperature"><span class="temperature-data">30 ºC</span>
+      <div class="temperature"><div class="temperature-data">30</div>
         <div class="temperature-retangule"></div>
         <div class="temperature-icon"></div>
       </div>
-
-      <div class=humidity><span class="humidity-data">25 %</span>
+ 
+      <div class=humidity><div class="humidity-data">25</div>
         <div class="humidity-retangule"></div>
         <div class="humidity-icon"></div>
       </div>
-
-      <div class=fuel><span class="fuel-data">77 %</span>
+ 
+      <div class=fuel><div class="fuel-data">77</div>
         <div class="fuel-retangule"></div>
         <div class="fuel-icon"></div>
       </div>
       <div class=oil>
         <div class="oil-retangule"></div>
-        <div class="oil-icon"></div><span class="oil-data">68 %</span>
+        <div class="oil-icon"></div><div class="oil-data">68</div>
       </div>
     </div>
     <div class="scania-logo"></div>
   </div>
 </body>
+ 
+ 
+ 
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+ 
 
+<script type="module">
+ 
+  //import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+  //import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
+  //import { } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js';
+  //import { getDatabase } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js';
+ 
+ 
+ 
+ 
+  const firebaseConfig = {
+    apiKey: "AIzaSyBbZHqxDbojbNKaDfLs7uR9NR84MzQEMQw",
+    authDomain: "flux-m-cca2f.firebaseapp.com",
+    databaseURL: "https://flux-m-cca2f-default-rtdb.firebaseio.com",
+    projectId: "flux-m-cca2f",
+    storageBucket: "flux-m-cca2f.appspot.com",
+    messagingSenderId: "43662843090",
+    appId: "1:43662843090:web:6032014d4a08165e21610b",
+    measurementId: "G-5V6EKLSVCQ"
+  };
+ 
+ 
+ 
+  firebase.initializeApp(firebaseConfig);
+ 
+  var firebaseRef1 = firebase.database().ref("DHT11/Temperature");
+  var firebaseRef2 = firebase.database().ref("DHT11/Humidity");
+ 
+  function updateValues(firebaseRef, dataTag) {
+    firebaseRef.on('value', function(snapshot) {
+      var data = snapshot.val();
+      console.log(data);
+      dataTag.innerHTML = data;
+    });
+  }
+ 
+  updateValues(firebaseRef1, document.querySelector('.temperature-data'));
+  updateValues(firebaseRef2, document.querySelector('.humidity-data'));
+ 
+ 
+ 
+ 
+ 
+ 
+</script>
 </html>
