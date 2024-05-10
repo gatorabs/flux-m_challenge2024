@@ -17,42 +17,51 @@
 </head>
  
 <body>
-  <div class=e1>
-    <div class=e2>
-     
- 
-      <div class="black-retangule"></div>
-     
-      <div class="truck-icon"></div>
-      <div class="line"></div>
-      <div class="temperature"><div class="temperature-data">30</div>
-        <div class="temperature-retangule"></div>
-        <div class="temperature-icon"></div>
+    <div class=e1>
+      <div class=e2>
+      
+  
+        <div class="black-retangule"></div>
+      
+        <div class="truck-icon"></div>
+        <div class="line"></div>
+        <div class="temperature"><div class="temperature-data">30</div>
+          <div class="temperature-retangule"></div>
+          <div class="temperature-icon"></div>
+        </div>
+  
+        <div class=humidity><div class="humidity-data">25</div>
+          <div class="humidity-retangule"></div>
+          <div class="humidity-icon"></div>
+        </div>
+  
+        <div class=fuel><div class="fuel-data">77</div>
+          <div class="fuel-retangule"></div>
+          <div class="fuel-icon"></div>
+        </div>
+        <div class=oil>
+          <div class="oil-retangule"></div>
+          <div class="oil-icon"></div><div class="oil-data">68</div>
+        </div>
       </div>
- 
-      <div class=humidity><div class="humidity-data">25</div>
-        <div class="humidity-retangule"></div>
-        <div class="humidity-icon"></div>
-      </div>
- 
-      <div class=fuel><div class="fuel-data">77</div>
-        <div class="fuel-retangule"></div>
-        <div class="fuel-icon"></div>
-      </div>
-      <div class=oil>
-        <div class="oil-retangule"></div>
-        <div class="oil-icon"></div><div class="oil-data">68</div>
-      </div>
+      <div class="scania-logo"></div>
+      
     </div>
-    <div class="scania-logo"></div>
-  </div>
+    <div class="canvas-container">
+    <canvas id="myChart"></canvas>
+    </div>
+  
+  
+
+  
 </body>
  
- 
- 
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4"></script>
 <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
- 
+<script src="chart.js"></script>
+
 
 <script type="module">
  
@@ -83,14 +92,21 @@
   var firebaseRef2 = firebase.database().ref("DHT11/Humidity");
  
   function updateValues(firebaseRef, dataTag) {
+    var data;
     firebaseRef.on('value', function(snapshot) {
-      var data = snapshot.val();
+      data = snapshot.val();
       console.log(data);
       dataTag.innerHTML = data;
+      
     });
+    
   }
  
+  
+  
+    
   updateValues(firebaseRef1, document.querySelector('.temperature-data'));
+  
   updateValues(firebaseRef2, document.querySelector('.humidity-data'));
  
  

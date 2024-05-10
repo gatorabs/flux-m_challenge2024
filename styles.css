@@ -221,3 +221,13 @@
 	background-repeat:no-repeat;
 	background-size:cover;
 }
+
+.canvas-container{
+	float: right;
+	width:600px;
+	height:600px;
+	padding-top: 80px;
+	padding-right: 500px;
+	
+
+}
