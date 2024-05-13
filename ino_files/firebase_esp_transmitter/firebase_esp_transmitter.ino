@@ -73,16 +73,17 @@ void loop(){
 
   float humidity = dht.getHumidity();
   float temperature = dht.getTemperature();
-  
-  bool alchool_sensor_reading = digitalRead(MQ3_PIN);
-  int fire_sensor_reading = digitalRead(FIRE_SENSOR);
-  Serial.println(fire_sensor_reading);
 
+  
+  //bool alchool_sensor_reading = digitalRead(MQ3_PIN);
+  //int fire_sensor_reading = digitalRead(FIRE_SENSOR);
+  //Serial.println(fire_sensor_reading);
+  Serial.println(temperature);
   
   dht_sensor_fb(temperature, humidity);
-  alchool_sensor_fb(alchool_sensor_reading);
+  //alchool_sensor_fb(alchool_sensor_reading);
 
-  fire_sensor_fb(fire_sensor_reading);
+  //fire_sensor_fb(fire_sensor_reading);
 
 }
 

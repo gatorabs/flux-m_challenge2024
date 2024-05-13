@@ -46,10 +46,7 @@
       </div>
       <div class="scania-logo"></div>
       
-    </div>
-    <div class="canvas-container">
-    <canvas id="myChart"></canvas>
-    </div>
+    
   
   
 
@@ -60,7 +57,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4"></script>
 <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
-<script src="chart.js"></script>
+
 
 
 <script type="module">
@@ -96,12 +93,21 @@
     firebaseRef.on('value', function(snapshot) {
       data = snapshot.val();
       console.log(data);
-      dataTag.innerHTML = data;
+      if(dataTag.className === 'humidity-data'){
+        dataTag.innerHTML = data + '%';
+        
+
+      }
+      if(dataTag.className === 'temperature-data'){
+        dataTag.innerHTML = data + ' °C';
+        
+      }
       
     });
     
   }
  
+  
   
   
     

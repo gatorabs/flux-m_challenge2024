@@ -53,6 +53,7 @@
 	position:absolute;
 	left:96px;
 	top:122px;
+	white-space: nowrap;
 }
 .temperature-data { 
 	color:rgba(255, 255, 255, 1);
@@ -106,6 +107,7 @@
 	text-align:left;
 	font-size:20px;
 	letter-spacing:0;
+	white-space: nowrap;
 }
 .humidity-retangule { 
 	background-color:rgba(32.00000189244747, 41.00000135600567, 120.00000044703484, 1);
