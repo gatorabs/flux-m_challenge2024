@@ -25,23 +25,23 @@
       
         <div class="truck-icon"></div>
         <div class="line"></div>
-        <div class="temperature"><div class="temperature-data">30</div>
+        <div class="temperature"><div class="temperature-data"></div>
           <div class="temperature-retangule"></div>
           <div class="temperature-icon"></div>
         </div>
   
-        <div class=humidity><div class="humidity-data">25</div>
+        <div class=humidity><div class="humidity-data"></div>
           <div class="humidity-retangule"></div>
           <div class="humidity-icon"></div>
         </div>
   
-        <div class=fuel><div class="fuel-data">77</div>
-          <div class="fuel-retangule"></div>
-          <div class="fuel-icon"></div>
+        <div class=metan_gas><div class="metan_gas-data"></div>
+          <div class="metan_gas-retangule"></div>
+          <div class="metan_gas-icon"></div>
         </div>
-        <div class=oil>
-          <div class="oil-retangule"></div>
-          <div class="oil-icon"></div><div class="oil-data">68</div>
+        <div class=fire>
+          <div class="fire-retangule"></div>
+          <div class="fire-icon"></div><div class="fire-data"></div>
         </div>
       </div>
       <div class="scania-logo"></div>
@@ -87,37 +87,35 @@
  
   var firebaseRef1 = firebase.database().ref("DHT11/Temperature");
   var firebaseRef2 = firebase.database().ref("DHT11/Humidity");
- 
-  function updateValues(firebaseRef, dataTag) {
-    var data;
-    firebaseRef.on('value', function(snapshot) {
-      data = snapshot.val();
-      console.log(data);
-      if(dataTag.className === 'humidity-data'){
-        dataTag.innerHTML = data + '%';
-        
+  var firebaseRef3 = firebase.database().ref("MQ4");
+  var firebaseRef4 = firebase.database().ref("FIRE");
 
-      }
-      if(dataTag.className === 'temperature-data'){
-        dataTag.innerHTML = data + ' °C';
-        
-      }
-      
-    });
-    
-  }
- 
+  function updateValues(firebaseRef, dataTag) {
+  const dataMapping = {
+    'humidity-data': (data) => `${data}%`,
+    'temperature-data': (data) => `${data} °C`,
+    'metan_gas-data': (data) => `${data}%`,
+    'fire-data': (data) => data === false ? "Ok." : "FIRE!"
+  };
+
+  firebaseRef.on('value', function(snapshot) {
+    const data = snapshot.val();
+    console.log(data);
+
+    const updateFunction = dataMapping[dataTag.className];
+    if (updateFunction) {
+      dataTag.innerHTML = updateFunction(data);
+    }
+  });
+}
+
+
   
-  
-  
-    
   updateValues(firebaseRef1, document.querySelector('.temperature-data'));
-  
   updateValues(firebaseRef2, document.querySelector('.humidity-data'));
- 
- 
- 
- 
+  updateValues(firebaseRef3, document.querySelector('.metan_gas-data'));
+  updateValues(firebaseRef4, document.querySelector('.fire-data'));
+
  
  
 </script>

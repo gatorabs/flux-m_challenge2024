@@ -125,20 +125,20 @@
 	width:41px;
 	height:44px;
 	position:absolute;
-	left:5px;
+	left:3px;
 	top:-1px;
 	background-image:url(images/gota.png);
 	background-repeat:no-repeat;
 	background-size:cover;
 }
-.fuel { 
+.metan_gas { 
 	width:105px;
 	height:49px;
 	position:absolute;
 	left:93px;
 	top:284px;
 }
-.fuel-data { 
+.metan_gas-data { 
 	color:rgba(255, 255, 255, 1);
 	width:39px;
 	height:24px;
@@ -150,7 +150,7 @@
 	font-size:20px;
 	letter-spacing:0;
 }
-.fuel-retangule { 
+.metan_gas-retangule { 
 	background-color:rgba(32.00000189244747, 41.00000135600567, 120.00000044703484, 1);
 	width:50px;
 	height:50px;
@@ -162,24 +162,24 @@
 	border-bottom-left-radius:6px;
 	border-bottom-right-radius:6px;
 }
-.fuel-icon { 
-	width:30px;
-	height:35px;
+.metan_gas-icon { 
+	width:40px;
+	height:40px;
 	position:absolute;
-	left:10px;
-	top:6px;
-	background-image:url(images/fuel.png);
+	left:6px;
+	top:4px;
+	background-image:url(images/metan_gas.png);
 	background-repeat:no-repeat;
 	background-size:cover;
 }
-.oil { 
+.fire { 
 	width:105px;
 	height:49px;
 	position:absolute;
 	left:93px;
 	top:370px;
 }
-.oil-retangule { 
+.fire-retangule { 
 	background-color:rgba(32.00000189244747, 41.00000135600567, 120.00000044703484, 1);
 	width:50px;
 	height:50px;
@@ -191,17 +191,17 @@
 	border-bottom-left-radius:6px;
 	border-bottom-right-radius:6px;
 }
-.oil-icon { 
+.fire-icon { 
 	width:33px;
 	height:35px;
 	position:absolute;
 	left:9px;
 	top:6px;
-	background-image:url(images/oil.png);
+	background-image:url(images/fire.png);
 	background-repeat:no-repeat;
 	background-size:cover;
 }
-.oil-data { 
+.fire-data { 
 	color:rgba(255, 255, 255, 1);
 	width:42px;
 	height:24px;
