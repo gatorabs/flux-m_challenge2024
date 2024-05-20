@@ -1,7 +1,7 @@
 // https://www.youtube.com/watch?v=6cWhEmgBhbo&ab_channel=ElectronicsSimplified
 // config tutorial video, if an error occour
-
-
+// Firebase library: https://github.com/rolan37/Firebase-ESP-Client-main
+// DHTesp library: https://github.com/beegee-tokyo/DHTesp
 #include <Arduino.h>
 #include <WiFi.h>               
 #include <Firebase_ESP_Client.h>
