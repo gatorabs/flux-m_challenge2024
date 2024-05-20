@@ -17,8 +17,8 @@
 </head>
  
 <body>
-    <div class=e1>
-      <div class=e2>
+    <div class="e1">
+      <div class="e2">
       
   
         <div class="black-retangule"></div>
@@ -44,6 +44,21 @@
           <div class="fire-icon"></div><div class="fire-data"></div>
         </div>
       </div>
+
+      <div class="e3">
+        <div class="black-retangule_chart1">
+          
+          <canvas id="chart_1" width="330" height="180"></canvas>
+          
+        </div>
+      </div>
+
+      <div class="e4">
+        <div class="black-retangule_chart2">
+          <canvas id="chart_2" width="330" height="180"></canvas>
+
+        </div>
+      </div>
       <div class="scania-logo"></div>
       
     
@@ -59,6 +74,7 @@
 <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
 
 
+<script type="module" src="main.js"></script>
 
 <script type="module">
  
@@ -85,6 +101,52 @@
  
   firebase.initializeApp(firebaseConfig);
  
+
+  function initializeChart(chartId, label, backgroundColor, borderColor) {
+    var ctx = document.getElementById(chartId).getContext('2d');
+    return new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: [],
+        datasets: [{
+          label: label,
+          backgroundColor: backgroundColor,
+          borderColor: borderColor,
+          data: []
+        }]
+      },
+      options: {
+        scales: {
+          x: {
+            type: 'realtime',
+            realtime: {
+              delay: 2000,
+              onRefresh: function(chart) {
+                
+              }
+            }
+          },
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  }
+    function addDataToChart(chart, label, data) {
+      chart.data.labels.push(label);
+      chart.data.datasets.forEach((dataset) => {
+        dataset.data.push(data);
+      });
+      if (chart.data.labels.length > 6) {
+        chart.data.labels.shift(); 
+        chart.data.datasets.forEach((dataset) => {
+          dataset.data.shift(); 
+        });
+      }
+      chart.update();
+    }
+
   var firebaseRef1 = firebase.database().ref("DHT11/Temperature");
   var firebaseRef2 = firebase.database().ref("DHT11/Humidity");
   var firebaseRef3 = firebase.database().ref("MQ4");
@@ -109,14 +171,27 @@
   });
 }
 
-
+  function updateChartFromFirebase(firebaseRef, chart) {
+    firebaseRef.on('value', function(snapshot) {
+      const data = snapshot.val();
+      const label = new Date().toLocaleTimeString(); 
+      addDataToChart(chart, label, data);
+    });
+  }
   
+
+
   updateValues(firebaseRef1, document.querySelector('.temperature-data'));
   updateValues(firebaseRef2, document.querySelector('.humidity-data'));
   updateValues(firebaseRef3, document.querySelector('.metan_gas-data'));
   updateValues(firebaseRef4, document.querySelector('.fire-data'));
 
- 
+  var chart1 = initializeChart('chart_1', 'Temperature', 'rgba(255, 99, 132, 0.5)', 'rgba(255, 99, 132, 1)');
+  var chart2 = initializeChart('chart_2', 'Humidity', 'rgba(0, 0, 255, 0.5)', 'rgba(0, 0, 255, 1)');
+
+  updateChartFromFirebase(firebaseRef1, chart1);
+  updateChartFromFirebase(firebaseRef2, chart2);
+
  
 </script>
 </html>
