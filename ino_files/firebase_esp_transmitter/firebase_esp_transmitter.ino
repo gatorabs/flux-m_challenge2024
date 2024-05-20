@@ -2,6 +2,7 @@
 // config tutorial video, if an error occour
 // Firebase library: https://github.com/rolan37/Firebase-ESP-Client-main
 // DHTesp library: https://github.com/beegee-tokyo/DHTesp
+
 #include <Arduino.h>
 #include <WiFi.h>               
 #include <Firebase_ESP_Client.h>
@@ -16,8 +17,8 @@
 
 DHTesp dht;
 
-#define WIFI_SSID "FIAP-DINO"
-#define WIFI_PASSWORD "dino#2017"
+#define WIFI_SSID "VIVOFIBRA-18B6"
+#define WIFI_PASSWORD "3dd92218b6"
 #define API_KEY "AIzaSyBbZHqxDbojbNKaDfLs7uR9NR84MzQEMQw" //project config
                                                           //don't forget to set the anonymous login (authentication tab) 
 #define DATABASE_URL "https://flux-m-cca2f-default-rtdb.firebaseio.com/" //copy past over the realtime data base
