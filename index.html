@@ -163,7 +163,7 @@
     'humidity-data': (data) => `${data}%`,
     'temperature-data': (data) => `${data} °C`,
     'metan_gas-data': (data) => `${data}%`,
-    'fire-data': (data) => data === false ? "Ok." : "FIRE!"
+    'fire-data': (data) => data === true ? "Ok." : "FIRE!"
   };
 
   firebaseRef.on('value', function(snapshot) {
