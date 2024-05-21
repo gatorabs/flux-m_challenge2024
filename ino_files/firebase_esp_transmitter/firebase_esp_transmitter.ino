@@ -82,8 +82,8 @@ if (currentMillis - previousMillis >= 100) {
   float humidity = dht.getHumidity();
   float temperature = dht.getTemperature();
   int ldr_reading = analogRead(LDR_PIN);
-  int mq3_reading = analogRead(MQ3_PIN);
-  
+  int mq4_reading = analogRead(MQ4_PIN);
+  int mq4_mapping = map(mq4_reading, 0, 1023, 0, 100);
   digitalWrite(LASER_PIN, HIGH);
   
   //bool alchool_sensor_reading = digitalRead(MQ3_PIN);
@@ -94,6 +94,7 @@ if (currentMillis - previousMillis >= 100) {
 
   
   dht_sensor_fb(temperature, humidity);
+  mq4_sensor_fb(mq4_mapping);
   ldr_fb(ldr_reading);
   
   //alchool_sensor_fb(alchool_sensor_reading);
@@ -101,7 +102,16 @@ if (currentMillis - previousMillis >= 100) {
   }
 
 }
-
+void mq4_sensor_fb(int mq4_sensor){
+  if (Firebase.RTDB.setInt(&fbdo, "MQ4", mq4_sensor)){
+      Serial.print("MQ4 : ");
+      Serial.println(mq4_sensor);
+    }
+    else {
+      Serial.println("Failed to Read from the Sensor");
+      Serial.println("REASON: " + fbdo.errorReason());
+    }
+}
 void ldr_fb(int ldr_sensor){
     if (Firebase.RTDB.setInt(&fbdo, "LDR", ldr_sensor)){
       Serial.print("LDR : ");
