@@ -12,6 +12,7 @@
 
 #define DHTPIN 33
 #define MQ3_PIN 13
+#define MQ4_PIN 32
 #define FIRE_SENSOR 26
 #define LASER_PIN 15
 #define LDR_PIN 34
@@ -81,6 +82,7 @@ if (currentMillis - previousMillis >= 100) {
   float humidity = dht.getHumidity();
   float temperature = dht.getTemperature();
   int ldr_reading = analogRead(LDR_PIN);
+  int mq3_reading = analogRead(MQ3_PIN);
   
   digitalWrite(LASER_PIN, HIGH);
   
