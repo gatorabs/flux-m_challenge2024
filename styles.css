@@ -92,7 +92,7 @@
 	background-size:cover;
 }
 .temperature { 
-	width:102px;
+	width:120px;
 	height:47px;
 	position:absolute;
 	left:96px;
@@ -268,3 +268,21 @@
 	background-size:cover;
 }
 
+@keyframes flash-border {
+	0% {
+	  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
+	  border-radius: 10px;
+	}
+	50% {
+	  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
+	  border-radius: 10px;
+	}
+	100% {
+	  box-shadow: none;
+	}
+  }
+  
+  .flash-border {
+	animation: flash-border 1s ease-in-out;
+  }
+  

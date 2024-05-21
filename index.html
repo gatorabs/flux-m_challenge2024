@@ -173,6 +173,14 @@
     const updateFunction = dataMapping[dataTag.className];
     if (updateFunction) {
       dataTag.innerHTML = updateFunction(data);
+
+      
+      dataTag.classList.add('flash-border');
+
+      
+      setTimeout(() => {
+        dataTag.classList.remove('flash-border');
+      }, 1000);
     }
   });
 }
