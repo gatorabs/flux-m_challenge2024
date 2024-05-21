@@ -29,6 +29,14 @@
 	right:50px;
 	top:105px;
 }
+.e5 { 
+	width:350px;
+	height:200px;
+	position:absolute;
+	
+	right:438px;
+	top:340px;
+}
 
 .line { 
 	transform: rotate(90.1789619077864deg);
@@ -60,6 +68,13 @@
 }
 
 .black-retangule_chart2 {
+	background-color:rgba(0, 0, 0, 1);
+	width:350px;
+	height:200px;
+	border-radius: 10px;
+	
+}
+.black-retangule_chart3 {
 	background-color:rgba(0, 0, 0, 1);
 	width:350px;
 	height:200px;

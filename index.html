@@ -59,6 +59,11 @@
 
         </div>
       </div>
+      <div class="e5">
+        <div class="black-retangule_chart3">
+          <canvas id="chart_3" width="330" height="180"></canvas>
+        </div>
+      </div>
       <div class="scania-logo"></div>
       
     
@@ -151,6 +156,7 @@
   var firebaseRef2 = firebase.database().ref("DHT11/Humidity");
   var firebaseRef3 = firebase.database().ref("MQ4");
   var firebaseRef4 = firebase.database().ref("FIRE");
+  var firebaseRef5 = firebase.database().ref("LDR");
 
   function updateValues(firebaseRef, dataTag) {
   const dataMapping = {
@@ -188,9 +194,10 @@
 
   var chart1 = initializeChart('chart_1', 'Temperature', 'rgba(255, 99, 132, 0.5)', 'rgba(255, 99, 132, 1)');
   var chart2 = initializeChart('chart_2', 'Humidity', 'rgba(0, 0, 255, 0.5)', 'rgba(0, 0, 255, 1)');
-
+  var chart3 = initializeChart('chart_3', 'LDR', 'rgba(200, 10, 100, 0.5)', 'rgba(200, 10, 200, 1)');
   updateChartFromFirebase(firebaseRef1, chart1);
   updateChartFromFirebase(firebaseRef2, chart2);
+  updateChartFromFirebase(firebaseRef5, chart3);
 
  
 </script>

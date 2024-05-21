@@ -14,7 +14,7 @@
 #define MQ3_PIN 13
 #define FIRE_SENSOR 26
 #define LASER_PIN 15
-
+#define LDR_PIN 34
 DHTesp dht;
 
 #define WIFI_SSID "Galaxy A34 5G 6113"
@@ -30,7 +30,7 @@ FirebaseConfig config;
 unsigned long sendDataPrevMillis = 0;
 int count = 0;
 bool signupOK = false;                      
-bool is_laserOn = false;
+bool is_laserOn = true;
 void setup(){
   
   dht.setup(DHTPIN, DHTesp::DHT11);
@@ -49,6 +49,7 @@ void setup(){
   Serial.println(WiFi.localIP());
   Serial.println();
 
+ 
   /* Assign the api key (required) */
   config.api_key = API_KEY;
 
@@ -70,40 +71,45 @@ void setup(){
   Firebase.begin(&config, &auth);
   Firebase.reconnectWiFi(true);
 }
+unsigned long previousMillis = 0;
 
 void loop(){
+ unsigned long currentMillis = millis(); 
 
+if (currentMillis - previousMillis >= 100) {
+  previousMillis = currentMillis;
   float humidity = dht.getHumidity();
   float temperature = dht.getTemperature();
-  updateLaser();
+  int ldr_reading = analogRead(LDR_PIN);
+  
+  digitalWrite(LASER_PIN, HIGH);
   
   //bool alchool_sensor_reading = digitalRead(MQ3_PIN);
   //int fire_sensor_reading = digitalRead(FIRE_SENSOR);
   //Serial.println(fire_sensor_reading);
-  Serial.println(temperature);
+  
+  
+
   
   dht_sensor_fb(temperature, humidity);
+  ldr_fb(ldr_reading);
+  
   //alchool_sensor_fb(alchool_sensor_reading);
-
   //fire_sensor_fb(fire_sensor_reading);
-
-}
-
-void updateLaser(){
-    if(Serial.available() > 0){
-    char incomingByte = Serial.read();
-    if(incomingByte == 'L'){
-      is_laserOn = true;
-    }else if(incomingByte == 'B'){
-      is_laserOn = false;
-      digitalWrite(LASER_PIN, LOW);
-    }
-    if(is_laserOn){
-      digitalWrite(LASER_PIN, HIGH);
-    }
   }
+
 }
 
+void ldr_fb(int ldr_sensor){
+    if (Firebase.RTDB.setInt(&fbdo, "LDR", ldr_sensor)){
+      Serial.print("LDR : ");
+      Serial.println(ldr_sensor);
+    }
+    else {
+      Serial.println("Failed to Read from the Sensor");
+      Serial.println("REASON: " + fbdo.errorReason());
+    }
+}
 void fire_sensor_fb(bool fire_sensor){
   if (Firebase.RTDB.setInt(&fbdo, "FIRE", fire_sensor)){
       Serial.print("Fire : ");
@@ -139,7 +145,7 @@ void dht_sensor_fb(float temperature, float humidity){
     
     if (Firebase.RTDB.setFloat(&fbdo, "DHT11/Humidity", humidity)){
       Serial.print("Humidity : ");
-      Serial.print(humidity);
+      Serial.println(humidity);
     }
     else {
       Serial.println("Failed to Read from the Sensor");
