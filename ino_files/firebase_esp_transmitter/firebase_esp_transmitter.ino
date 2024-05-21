@@ -13,12 +13,12 @@
 #define DHTPIN 33
 #define MQ3_PIN 13
 #define FIRE_SENSOR 26
-
+#define LASER_PIN 15
 
 DHTesp dht;
 
-#define WIFI_SSID "VIVOFIBRA-18B6"
-#define WIFI_PASSWORD "3dd92218b6"
+#define WIFI_SSID "Galaxy A34 5G 6113"
+#define WIFI_PASSWORD "banana123"
 #define API_KEY "AIzaSyBbZHqxDbojbNKaDfLs7uR9NR84MzQEMQw" //project config
                                                           //don't forget to set the anonymous login (authentication tab) 
 #define DATABASE_URL "https://flux-m-cca2f-default-rtdb.firebaseio.com/" //copy past over the realtime data base
@@ -30,10 +30,11 @@ FirebaseConfig config;
 unsigned long sendDataPrevMillis = 0;
 int count = 0;
 bool signupOK = false;                      
-
+bool is_laserOn = false;
 void setup(){
   
   dht.setup(DHTPIN, DHTesp::DHT11);
+  pinMode(LASER_PIN, OUTPUT);
   pinMode(FIRE_SENSOR, INPUT);
   pinMode(MQ3_PIN, OUTPUT);
   Serial.begin(115200);
@@ -74,7 +75,7 @@ void loop(){
 
   float humidity = dht.getHumidity();
   float temperature = dht.getTemperature();
-
+  updateLaser();
   
   //bool alchool_sensor_reading = digitalRead(MQ3_PIN);
   //int fire_sensor_reading = digitalRead(FIRE_SENSOR);
@@ -86,6 +87,21 @@ void loop(){
 
   //fire_sensor_fb(fire_sensor_reading);
 
+}
+
+void updateLaser(){
+    if(Serial.available() > 0){
+    char incomingByte = Serial.read();
+    if(incomingByte == 'L'){
+      is_laserOn = true;
+    }else if(incomingByte == 'B'){
+      is_laserOn = false;
+      digitalWrite(LASER_PIN, LOW);
+    }
+    if(is_laserOn){
+      digitalWrite(LASER_PIN, HIGH);
+    }
+  }
 }
 
 void fire_sensor_fb(bool fire_sensor){
