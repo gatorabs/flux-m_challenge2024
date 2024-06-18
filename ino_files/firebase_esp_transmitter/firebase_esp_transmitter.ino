@@ -18,8 +18,8 @@
 #define LDR_PIN 34
 DHTesp dht;
 
-#define WIFI_SSID "Galaxy A34 5G 6113"
-#define WIFI_PASSWORD "banana123"
+#define WIFI_SSID "VIVOFIBRA-18B6"
+#define WIFI_PASSWORD "3dd92218b6"
 #define API_KEY "AIzaSyBbZHqxDbojbNKaDfLs7uR9NR84MzQEMQw" //project config
                                                           //don't forget to set the anonymous login (authentication tab) 
 #define DATABASE_URL "https://flux-m-cca2f-default-rtdb.firebaseio.com/" //copy past over the realtime data base
@@ -84,21 +84,24 @@ if (currentMillis - previousMillis >= 100) {
   int ldr_reading = analogRead(LDR_PIN);
   int mq4_reading = analogRead(MQ4_PIN);
   int mq4_mapping = map(mq4_reading, 0, 1023, 0, 100);
+  int fire_sensor_reading = digitalRead(FIRE_SENSOR);
+  
   digitalWrite(LASER_PIN, HIGH);
   
   //bool alchool_sensor_reading = digitalRead(MQ3_PIN);
-  //int fire_sensor_reading = digitalRead(FIRE_SENSOR);
+  
   //Serial.println(fire_sensor_reading);
   
   
 
   
-  dht_sensor_fb(temperature, humidity);
+  //dht_sensor_fb(temperature, humidity);
   mq4_sensor_fb(mq4_mapping);
   ldr_fb(ldr_reading);
+  fire_sensor_fb(fire_sensor_reading);
   
   //alchool_sensor_fb(alchool_sensor_reading);
-  //fire_sensor_fb(fire_sensor_reading);
+  
   }
 
 }

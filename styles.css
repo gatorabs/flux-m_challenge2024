@@ -1,288 +1,444 @@
-
-.e1 { 
-	width:1280px;
-	height:720px;
+.mainFrame { 
+	overflow:hidden;
+}
+.mainFrame { 
+	background-color:rgba(19.67136014252901, 19.67136014252901, 19.67136014252901, 1);
+	width:1366px;
+	height:768px;
 	position:absolute;
-	
 }
-.e2 { 
-	width:359px;
-	height:495px;
+.fire { 
+	width:105px;
+	height:282px;
 	position:absolute;
-	left:95px;
-	top:106px;
+	left:1187px;
+	top:158px;
 }
-
-.e3 { 
-	width:350px;
-	height:200px;
+.fire-box { 
+	box-shadow:0px 4px 6.300000190734863px rgba(0, 0, 0, 0.4000000059604645);
+	background-color:rgba(43.81907768547535, 43.81907768547535, 43.81907768547535, 1);
+	width:105px;
+	height:281px;
 	position:absolute;
-	right:438px;
-	top:105px;
+	left:0px;
+	top:1px;
+	border-top-left-radius:25px;
+	border-top-right-radius:25px;
+	border-bottom-left-radius:25px;
+	border-bottom-right-radius:25px;
 }
-
-.e4 { 
-	width:350px;
-	height:200px;
+.fire-frame { 
+	border:2px solid rgba(184.00000423192978, 35.00000171363354, 35.00000171363354, 1);
+}
+.fire-frame { 
+	width:80px;
+	height:72px;
 	position:absolute;
-	
-	right:50px;
-	top:105px;
+	left:13px;
+	top:57px;
+	border-top-left-radius:9px;
+	border-top-right-radius:9px;
+	border-bottom-left-radius:9px;
+	border-bottom-right-radius:9px;
 }
-.e5 { 
-	width:350px;
-	height:200px;
+.fire-data { 
+	color:rgba(255, 255, 255, 1);
+	width:54px;
+	height:38px;
 	position:absolute;
-	
-	right:438px;
-	top:340px;
+	left:26px;
+	top:172px;
+	font-family:Jura;
+	text-align:left;
+	font-size:32px;
+	letter-spacing:0;
 }
-
-.line { 
-	transform: rotate(90.1789619077864deg);
-	width:350;
-	height:0px;
+.fire-icon { 
+	width:74px;
+	height:72px;
 	position:absolute;
-	left:-100px;
-	top:270px;
-	border: 3px solid white;
-
-}
-
-.black-retangule { 
-	background-color:rgba(0, 0, 0, 1);
-	width:360px;
-	height:496px;
-	position:absolute;
-	left:-1px;
-	top:-1px;
-	border-radius: 10px;
-}
-
-.black-retangule_chart1 {
-	background-color:rgba(0, 0, 0, 1);
-	width:350px;
-	height:200px;
-	border-radius: 10px;
-	
-}
-
-.black-retangule_chart2 {
-	background-color:rgba(0, 0, 0, 1);
-	width:350px;
-	height:200px;
-	border-radius: 10px;
-	
-}
-.black-retangule_chart3 {
-	background-color:rgba(0, 0, 0, 1);
-	width:350px;
-	height:200px;
-	border-radius: 10px;
-	
-}
-.truck-icon { 
-	width:50px;
-	height:50px;
-	position:absolute;
-	left:23px;
-	top:13px;
-	background-image:url(images/truck.png);
+	left:16px;
+	top:57px;
+	background-image:url(images/fire_icon.png);
 	background-repeat:no-repeat;
 	background-size:cover;
 }
-.temperature { 
-	width:120px;
-	height:47px;
+.e40_62 { 
+	width:110px;
+	height:280px;
 	position:absolute;
-	left:96px;
-	top:122px;
-	white-space: nowrap;
+	left:1073px;
+	top:160px;
+}
+.e39_31 { 
+	box-shadow:0px 4px 6.300000190734863px rgba(0, 0, 0, 0.4000000059604645);
+	background-color:rgba(43.81907768547535, 43.81907768547535, 43.81907768547535, 1);
+	width:105px;
+	height:281px;
+	position:absolute;
+	left:3px;
+	top:-1px;
+	border-top-left-radius:25px;
+	border-top-right-radius:25px;
+	border-bottom-left-radius:25px;
+	border-bottom-right-radius:25px;
+}
+.e39_34 { 
+	border:2px solid rgba(212.00000256299973, 89.00000229477882, 0, 1);
+}
+.e39_34 { 
+	width:80px;
+	height:72px;
+	position:absolute;
+	left:16px;
+	top:55px;
+	border-top-left-radius:9px;
+	border-top-right-radius:9px;
+	border-bottom-left-radius:9px;
+	border-bottom-right-radius:9px;
+}
+.e38_29 { 
+	width:63px;
+	height:63px;
+	position:absolute;
+	left:24px;
+	top:60px;
+	background-image:url(images/combustivel_1.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+.e39_49 { 
+	color:rgba(255, 255, 255, 1);
+	width:92px;
+	height:76px;
+	position:absolute;
+	left:9px;
+	top:140px;
+	font-family:Jura;
+	text-align:center;
+	font-size:32px;
+	letter-spacing:0;
+}
+.temperature { 
+	width:218px;
+	height:88px;
+	position:absolute;
+	left:1074px;
+	top:35px;
+}
+.temperature-box { 
+	box-shadow:0px 4px 6.300000190734863px rgba(0, 0, 0, 0.4000000059604645);
+	background-color:rgba(43.81907768547535, 43.81907768547535, 43.81907768547535, 1);
+	width:219px;
+	height:88px;
+	position:absolute;
+	left:-1px;
+	top:0px;
+	border-top-left-radius:34px;
+	border-top-right-radius:34px;
+	border-bottom-left-radius:34px;
+	border-bottom-right-radius:34px;
 }
 .temperature-data { 
 	color:rgba(255, 255, 255, 1);
-	width:60px;
-	height:24px;
+	width:104px;
+	height:38px;
 	position:absolute;
-	left:57px;
-	top:12px;
-	font-family:Inria Sans;
+	left:87px;
+	top:21px;
+	font-family:Jura;
 	text-align:left;
-	font-size:20px;
+	font-size:40px;
 	letter-spacing:0;
 }
-.temperature-retangule { 
-	background-color:rgba(32.00000189244747, 41.00000135600567, 120.00000044703484, 1);
-	width:50px;
-	height:50px;
+.temperature-icon { 
+	width:52px;
+	height:58px;
 	position:absolute;
-	left:-3px;
+	left:19px;
+	top:15px;
+	background-image:url(images/temperatura_alta_1.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+.e40_59 { 
+	width:480px;
+	height:696px;
+	position:absolute;
+	left:567px;
+	top:37px;
+}
+.e39_39 { 
+	box-shadow:0px 4px 6.300000190734863px rgba(0, 0, 0, 0.4000000059604645);
+	background-color:rgba(43.81907768547535, 43.81907768547535, 43.81907768547535, 1);
+	width:480px;
+	height:698px;
+	position:absolute;
+	left:0px;
+	top:-2px;
+	border-top-left-radius:6px;
+	border-top-right-radius:6px;
+	border-bottom-left-radius:6px;
+	border-bottom-right-radius:6px;
+}
+.e39_46 { 
+	width:425px;
+	height:440px;
+	position:absolute;
+	left:28px;
+	top:237px;
+}
+.e39_44 { 
+	background-color:rgba(63.13726767897606, 63.13726767897606, 63.13726767897606, 1);
+	width:427px;
+	height:440px;
+	position:absolute;
+	left:-2px;
+	top:0px;
+	border-top-left-radius:12px;
+	border-top-right-radius:12px;
+	border-bottom-left-radius:12px;
+	border-bottom-right-radius:12px;
+}
+.ldr-chart { 
+	width:400px;
+	height:219px;
+	position:absolute;
+	left:139px;
+	top:514px;
+}
+.ldr-chart-data { 
+	box-shadow:0px 4px 6.300000190734863px rgba(0, 0, 0, 0.4000000059604645);
+	background-color:rgba(43.81907768547535, 43.81907768547535, 43.81907768547535, 1);
+	width:400px;
+	height:220px;
+	position:absolute;
+	left:0px;
 	top:-1px;
 	border-top-left-radius:6px;
 	border-top-right-radius:6px;
 	border-bottom-left-radius:6px;
 	border-bottom-right-radius:6px;
 }
-.temperature-icon { 
-	width:46px;
-	height:45px;
+.metanGas-chart{ 
+	width:399px;
+	height:219px;
+	position:absolute;
+	left:140px;
+	top:275px;
+}
+.metanGas-chart-data { 
+	box-shadow:0px 4px 6.300000190734863px rgba(0, 0, 0, 0.4000000059604645);
+	background-color:rgba(43.81907768547535, 43.81907768547535, 43.81907768547535, 1);
+	width:400px;
+	height:220px;
 	position:absolute;
 	left:-1px;
-	top:2px;
-	background-image:url(images/temperature.png);
+	top:-1px;
+	border-top-left-radius:6px;
+	border-top-right-radius:6px;
+	border-bottom-left-radius:6px;
+	border-bottom-right-radius:6px;
+}
+.humidity-chart { 
+	width:399px;
+	height:219px;
+	position:absolute;
+	left:140px;
+	top:36px;
+}
+.humidity-chart-data { 
+	box-shadow:0px 4px 6.300000190734863px rgba(0, 0, 0, 0.4000000059604645);
+	background-color:rgba(43.81907768547535, 43.81907768547535, 43.81907768547535, 1);
+	width:400px;
+	height:220px;
+	position:absolute;
+	left:-1px;
+	top:-1px;
+	border-top-left-radius:6px;
+	border-top-right-radius:6px;
+	border-bottom-left-radius:6px;
+	border-bottom-right-radius:6px;
+}
+.ldr { 
+	width:100px;
+	height:219px;
+	position:absolute;
+	left:22px;
+	top:514px;
+}
+.ldr-frame { 
+	border:2px solid rgba(255, 249.00000035762787, 44.000001177191734, 1);
+}
+.ldr-frame { 
+	width:80px;
+	height:72px;
+	position:absolute;
+	left:10px;
+	top:9px;
+	border-top-left-radius:9px;
+	border-top-right-radius:9px;
+	border-bottom-left-radius:9px;
+	border-bottom-right-radius:9px;
+}
+.ldr-box { 
+	box-shadow:0px 4px 6.300000190734863px rgba(0, 0, 0, 0.4000000059604645);
+	background-color:rgba(43.81907768547535, 43.81907768547535, 43.81907768547535, 1);
+	width:100px;
+	height:220px;
+	position:absolute;
+	left:0px;
+	top:-1px;
+	border-top-left-radius:6px;
+	border-top-right-radius:6px;
+	border-bottom-left-radius:6px;
+	border-bottom-right-radius:6px;
+}
+.ldr-image { 
+	width:72px;
+	height:80px;
+	position:absolute;
+	left:14px;
+	top:-1px;
+	background-image:url(images/luminosidade_2.png);
 	background-repeat:no-repeat;
 	background-size:cover;
 }
-.humidity { 
-	width:102px;
-	height:46px;
-	position:absolute;
-	left:93px;
-	top:208px;
-}
-.humidity-data { 
+.ldr-data { 
 	color:rgba(255, 255, 255, 1);
-	width:35px;
-	height:24px;
+	width:74px;
+	height:59px;
 	position:absolute;
-	left:60px;
-	top:9px;
-	font-family:Inria Sans;
+	left:15px;
+	top:109px;
+	font-family:Jura;
 	text-align:left;
-	font-size:20px;
+	font-size:40px;
 	letter-spacing:0;
-	white-space: nowrap;
 }
-.humidity-retangule { 
-	background-color:rgba(32.00000189244747, 41.00000135600567, 120.00000044703484, 1);
-	width:50px;
-	height:50px;
+.metanGas { 
+	width:99px;
+	height:220px;
 	position:absolute;
-	left:0px;
-	top:-4px;
+	left:23px;
+	top:274px;
+}
+.metanGas-box { 
+	box-shadow:0px 4px 6.300000190734863px rgba(0, 0, 0, 0.4000000059604645);
+	background-color:rgba(43.81907768547535, 43.81907768547535, 43.81907768547535, 1);
+	width:100px;
+	height:220px;
+	position:absolute;
+	left:-1px;
+	top:0px;
+	border-top-left-radius:6px;
+	border-top-right-radius:6px;
+	border-bottom-left-radius:6px;
+	border-bottom-right-radius:6px;
+}
+.metanGas-frame { 
+	border:2px solid rgba(0, 0, 0, 1);
+}
+.metanGas-frame { 
+	width:80px;
+	height:72px;
+	position:absolute;
+	left:9px;
+	top:10px;
+	border-top-left-radius:9px;
+	border-top-right-radius:9px;
+	border-bottom-left-radius:9px;
+	border-bottom-right-radius:9px;
+}
+.metanGas-image { 
+	width:73px;
+	height:67px;
+	position:absolute;
+	left:13px;
+	top:13px;
+	background-image:url(images/ch4_1.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+.metanGas-data { 
+	color:rgba(255, 255, 255, 1);
+	width:74px;
+	height:59px;
+	position:absolute;
+	left:14px;
+	top:111px;
+	font-family:Jura;
+	text-align:left;
+	font-size:40px;
+	letter-spacing:0;
+}
+.humidity{ 
+	width:99px;
+	height:220px;
+	position:absolute;
+	left:23px;
+	top:35px;
+}
+.humidity-box { 
+	box-shadow:0px 4px 6.300000190734863px rgba(0, 0, 0, 0.4000000059604645);
+	background-color:rgba(43.81907768547535, 43.81907768547535, 43.81907768547535, 1);
+	width:100px;
+	height:220px;
+	position:absolute;
+	left:-1px;
+	top:0px;
 	border-top-left-radius:6px;
 	border-top-right-radius:6px;
 	border-bottom-left-radius:6px;
 	border-bottom-right-radius:6px;
 }
 .humidity-icon { 
-	width:41px;
-	height:44px;
+	width:70px;
+	height:74.66666412353516px;
 	position:absolute;
-	left:3px;
-	top:-1px;
-	background-image:url(images/gota.png);
-	background-repeat:no-repeat;
-	background-size:cover;
-}
-.metan_gas { 
-	width:105px;
-	height:49px;
-	position:absolute;
-	left:93px;
-	top:284px;
-}
-.metan_gas-data { 
-	color:rgba(255, 255, 255, 1);
-	width:35px;
-	height:24px;
-	position:absolute;
-	left:60px;
+	left:14px;
 	top:12px;
-	font-family:Inria Sans;
-	text-align:left;
-	font-size:20px;
-	letter-spacing:0;
-}
-.metan_gas-retangule { 
-	background-color:rgba(32.00000189244747, 41.00000135600567, 120.00000044703484, 1);
-	width:50px;
-	height:50px;
-	position:absolute;
-	left:0px;
-	top:-1px;
-	border-top-left-radius:6px;
-	border-top-right-radius:6px;
-	border-bottom-left-radius:6px;
-	border-bottom-right-radius:6px;
-}
-.metan_gas-icon { 
-	width:40px;
-	height:40px;
-	position:absolute;
-	left:6px;
-	top:4px;
-	background-image:url(images/metan_gas.png);
+	border-top-left-radius:25px;
+	border-top-right-radius:25px;
+	border-bottom-left-radius:25px;
+	border-bottom-right-radius:25px;
+	background-image:url(images/gota_de_agua_2.png);
 	background-repeat:no-repeat;
 	background-size:cover;
 }
-.fire { 
-	width:105px;
-	height:49px;
-	position:absolute;
-	left:93px;
-	top:370px;
+.humdity-frame { 
+	border:2px solid rgba(55.00000052154064, 193.00000369548798, 254.00000005960464, 1);
 }
-.fire-retangule { 
-	background-color:rgba(32.00000189244747, 41.00000135600567, 120.00000044703484, 1);
-	width:50px;
-	height:50px;
-	position:absolute;
-	left:0px;
-	top:-1px;
-	border-top-left-radius:6px;
-	border-top-right-radius:6px;
-	border-bottom-left-radius:6px;
-	border-bottom-right-radius:6px;
-}
-.fire-icon { 
-	width:33px;
-	height:35px;
-	position:absolute;
-	left:9px;
-	top:6px;
-	background-image:url(images/fire.png);
-	background-repeat:no-repeat;
-	background-size:cover;
-}
-.fire-data { 
-	color:rgba(255, 255, 255, 1);
-	width:30px;
-	height:24px;
-	position:absolute;
-	left:60px;
-	top:12px;
-	font-family:Inria Sans;
-	text-align:left;
-	font-size:20px;
-	letter-spacing:0;
-}
-.scania-logo { 
-	width:81px;
+.humdity-frame { 
+	width:80px;
 	height:81px;
 	position:absolute;
-	left:2px;
-	top:-7px;
-	background-image:url(images/scania.png);
+	left:9px;
+	top:10px;
+	border-top-left-radius:9px;
+	border-top-right-radius:9px;
+	border-bottom-left-radius:9px;
+	border-bottom-right-radius:9px;
+}
+.humidity-data{ 
+	color:rgba(255, 255, 255, 1);
+	width:74px;
+	height:59px;
+	position:absolute;
+	left:14px;
+	top:120px;
+	font-family:Jura;
+	text-align:left;
+	font-size:40px;
+	letter-spacing:0;
+}
+.e39_51 { 
+	width:219px;
+	height:210px;
+	position:absolute;
+	left:1073px;
+	top:475px;
+	background-image:url(images/scania_logo.png);
 	background-repeat:no-repeat;
 	background-size:cover;
 }
-
-@keyframes flash-border {
-	0% {
-	  box-shadow: 0 0 8px 5px rgba(255, 255, 0, 0.3);
-	  border-radius: 10px;
-	}
-	50% {
-	  box-shadow: 0 0 8px 5px rgba(255, 255, 0, 0.3);
-	  border-radius: 10px;
-	}
-	100% {
-	  box-shadow: none;
-	}
-  }
-  
-  .flash-border {
-	animation: flash-border 1s ease-in-out;
-  }
-  

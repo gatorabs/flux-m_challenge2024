@@ -1,96 +1,114 @@
 <html lang="en">
- 
+
 <head>
-  <meta charset="utf-8">
- 
-  <title>Flux-m</title>
- 
-  <link href="https://fonts.googleapis.com/css?family=Inria+Sans&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
- 
+  <meta charset="utf-8" />
+
+  <title>Html Generated</title>
+  <meta name="description" content="Figma htmlGenerator" />
+  <meta name="author" content="htmlGenerator" />
+  <link href="https://fonts.googleapis.com/css?family=Inria+Sans&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Heebo&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Jura&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
   <style>
+    /*
+                Figma Background for illustrative/preview purposes only.
+                You can remove this style tag with no consequence
+              */
     body {
-      background: #E5E5E5;
+      background: #141414;
     }
   </style>
- 
 </head>
- 
+
 <body>
-    <div class="e1">
-      <div class="e2">
-      
-  
-        <div class="black-retangule"></div>
-      
-        <div class="truck-icon"></div>
-        <div class="line"></div>
-        <div class="temperature"><div class="temperature-data"></div>
-          <div class="temperature-retangule"></div>
-          <div class="temperature-icon"></div>
-        </div>
-  
-        <div class=humidity><div class="humidity-data"></div>
-          <div class="humidity-retangule"></div>
-          <div class="humidity-icon"></div>
-        </div>
-  
-        <div class=metan_gas><div class="metan_gas-data"></div>
-          <div class="metan_gas-retangule"></div>
-          <div class="metan_gas-icon"></div>
-        </div>
-        <div class=fire>
-          <div class="fire-retangule"></div>
-          <div class="fire-icon"></div><div class="fire-data"></div>
-        </div>
-      </div>
+  <div class="mainFrame">
+    <div class="fire">
+      <div class="fire-box"></div>
+      <div class="fire-frame"></div>
+      <span class="fire-data">OK.</span>
+      <div class="fire-icon"></div>
+    </div>
 
-      <div class="e3">
-        <div class="black-retangule_chart1">
-          
-          <canvas id="chart_1" width="330" height="180"></canvas>
-          
-        </div>
-      </div>
-
-      <div class="e4">
-        <div class="black-retangule_chart2">
-          <canvas id="chart_2" width="330" height="180"></canvas>
-
-        </div>
-      </div>
-      <div class="e5">
-        <div class="black-retangule_chart3">
-          <canvas id="chart_3" width="330" height="180"></canvas>
-        </div>
-      </div>
-      <div class="scania-logo"></div>
-      
+    <div class="e40_62">
+      <div class="e39_31"></div>
+      <div class="e39_34"></div>
+      <div class="e38_29"></div>
+      <span class="e39_49">25 kg/m³</span>
+    </div>
     
-  
-  
+    <div class="temperature">
+      <div class="temperature-box"></div>
+      <span class="temperature-data">30 °C</span>
+      <div class="temperature-icon"></div>
+    </div>
 
-  
+    <div class="e40_59">
+      <div class="e39_39"></div>
+      <div class="e39_46">
+        <div class="e39_44"></div>
+      </div>
+    </div>
+
+    <div class="ldr-chart">
+      <div class="ldr-chart-data">
+        <canvas id="chart_4" width="400" height="220"></canvas>
+      </div>
+    </div>
+
+    <div class="metanGas-chart">
+      <div class="metanGas-chart-data">
+        <canvas id="chart_3" width="400" height="220"></canvas>
+      </div>
+    </div>
+
+    <div class="humidity-chart">
+      <div class="humidity-chart-data">
+        <canvas id="chart_2" width="400" height="220"></canvas>
+      </div>
+    </div>
+
+    <div class="ldr">
+      <div class="ldr-box"></div>
+      <div class="ldr-frame"></div>
+      <div class="ldr-image"></div>
+      <div class="ldr-data">30%</div>
+    </div>
+
+    <div class="metanGas">
+      <div class="metanGas-box"></div>
+      <div class="metanGas-frame"></div>
+      <div class="metanGas-image"></div>
+      <div class="metangas-data">30%</div>
+    </div>
+
+    <div class="humidity">
+      <div class="humidity-box"></div>
+      <div class="humidity-icon"></div>
+      <div class="humdity-frame"></div>
+      <div class="humidity-data">30%</div>
+    </div>
+
+    <div class="e39_51"></div>
+  </div>
 </body>
- 
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4"></script>
 <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
 
-
-<script type="module" src="main.js"></script>
-
 <script type="module">
- 
+
   //import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
   //import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
   //import { } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js';
   //import { getDatabase } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js';
- 
- 
- 
- 
+
+
+
+
   const firebaseConfig = {
     apiKey: "AIzaSyBbZHqxDbojbNKaDfLs7uR9NR84MzQEMQw",
     authDomain: "flux-m-cca2f.firebaseapp.com",
@@ -101,11 +119,37 @@
     appId: "1:43662843090:web:6032014d4a08165e21610b",
     measurementId: "G-5V6EKLSVCQ"
   };
- 
- 
- 
+
+
+
   firebase.initializeApp(firebaseConfig);
- 
+
+
+  var firebaseRef1 = firebase.database().ref("DHT11/Temperature");
+  var firebaseRef2 = firebase.database().ref("DHT11/Humidity");
+  var firebaseRef3 = firebase.database().ref("MQ4");
+  var firebaseRef4 = firebase.database().ref("LDR");
+
+  function updateValues(firebaseRef, dataTag) {
+    var data;
+    const dataMapping = {
+      'humidity-data': (data) => `${data}%`,
+      'temperature-data': (data) => `${data} °C`,
+      'metangas-data': (data) => `${data}%`,
+      'ldr-data': (data) => `${data}%`,
+      'fire-data': (data) => data === true ? "Ok." : "FIRE!"
+    };
+    firebaseRef.on('value', function (snapshot) {
+      var data = snapshot.val();
+      data = snapshot.val();
+      const updateFunction = dataMapping[dataTag.className];
+
+      console.log(data);
+      dataTag.innerHTML = updateFunction(data);
+
+    });
+
+  }
 
   function initializeChart(chartId, label, backgroundColor, borderColor) {
     var ctx = document.getElementById(chartId).getContext('2d');
@@ -126,8 +170,8 @@
             type: 'realtime',
             realtime: {
               delay: 2000,
-              onRefresh: function(chart) {
-                
+              onRefresh: function (chart) {
+
               }
             }
           },
@@ -138,75 +182,48 @@
       }
     });
   }
-    function addDataToChart(chart, label, data) {
-      chart.data.labels.push(label);
+  function addDataToChart(chart, label, data) {
+    chart.data.labels.push(label);
+    chart.data.datasets.forEach((dataset) => {
+      dataset.data.push(data);
+    });
+    if (chart.data.labels.length > 6) {
+      chart.data.labels.shift();
       chart.data.datasets.forEach((dataset) => {
-        dataset.data.push(data);
+        dataset.data.shift();
       });
-      if (chart.data.labels.length > 6) {
-        chart.data.labels.shift(); 
-        chart.data.datasets.forEach((dataset) => {
-          dataset.data.shift(); 
-        });
-      }
-      chart.update();
     }
-
-  var firebaseRef1 = firebase.database().ref("DHT11/Temperature");
-  var firebaseRef2 = firebase.database().ref("DHT11/Humidity");
-  var firebaseRef3 = firebase.database().ref("MQ4");
-  var firebaseRef4 = firebase.database().ref("FIRE");
-  var firebaseRef5 = firebase.database().ref("LDR");
-
-  function updateValues(firebaseRef, dataTag) {
-  const dataMapping = {
-    'humidity-data': (data) => `${data}%`,
-    'temperature-data': (data) => `${data} °C`,
-    'metan_gas-data': (data) => `${data}%`,
-    'fire-data': (data) => data === true ? "Ok." : "FIRE!"
-  };
-
-  firebaseRef.on('value', function(snapshot) {
-    const data = snapshot.val();
-    console.log(data);
-
-    const updateFunction = dataMapping[dataTag.className];
-    if (updateFunction) {
-      dataTag.innerHTML = updateFunction(data);
-
-      
-      dataTag.classList.add('flash-border');
-
-      
-      setTimeout(() => {
-        dataTag.classList.remove('flash-border');
-      }, 1000);
-    }
-  });
-}
+    chart.update();
+  }
 
   function updateChartFromFirebase(firebaseRef, chart) {
-    firebaseRef.on('value', function(snapshot) {
+    firebaseRef.on('value', function (snapshot) {
       const data = snapshot.val();
-      const label = new Date().toLocaleTimeString(); 
+      const label = new Date().toLocaleTimeString();
       addDataToChart(chart, label, data);
     });
   }
+
   
+  var chart2 = initializeChart('chart_2', 'Humidity', 'rgba(0, 255, 255, 0.5)', 'rgba(0, 255, 255, 1)');
+  var chart3 = initializeChart('chart_3', 'Metan Gas', 'rgba(255, 255, 255, 0.5)', 'rgba(255, 255, 255, 1)');
+  var chart4 = initializeChart('chart_4', 'LDR', 'rgba(255, 255, 0, 0.5)', 'rgba(255, 255, 0, 1)');
 
-
+  
   updateValues(firebaseRef1, document.querySelector('.temperature-data'));
   updateValues(firebaseRef2, document.querySelector('.humidity-data'));
-  updateValues(firebaseRef3, document.querySelector('.metan_gas-data'));
-  updateValues(firebaseRef4, document.querySelector('.fire-data'));
+  updateValues(firebaseRef3, document.querySelector('.metangas-data'));
+  updateValues(firebaseRef4, document.querySelector('.ldr-data'));
 
-  var chart1 = initializeChart('chart_1', 'Temperature', 'rgba(255, 99, 132, 0.5)', 'rgba(255, 99, 132, 1)');
-  var chart2 = initializeChart('chart_2', 'Humidity', 'rgba(0, 0, 255, 0.5)', 'rgba(0, 0, 255, 1)');
-  var chart3 = initializeChart('chart_3', 'LDR', 'rgba(200, 10, 100, 0.5)', 'rgba(200, 10, 200, 1)');
-  updateChartFromFirebase(firebaseRef1, chart1);
+
   updateChartFromFirebase(firebaseRef2, chart2);
-  updateChartFromFirebase(firebaseRef5, chart3);
+  updateChartFromFirebase(firebaseRef3, chart3);
+  updateChartFromFirebase(firebaseRef4, chart4);
 
- 
+
+
+
+
 </script>
+
 </html>
