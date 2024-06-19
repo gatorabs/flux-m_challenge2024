@@ -190,8 +190,8 @@
 }
 .e39_44 { 
 	background-color:rgba(63.13726767897606, 63.13726767897606, 63.13726767897606, 1);
-	width:427px;
-	height:440px;
+	width:430px;
+	height:445px;
 	position:absolute;
 	left:-2px;
 	top:0px;
@@ -270,6 +270,8 @@
 .ldr-frame { 
 	border:2px solid rgba(255, 249.00000035762787, 44.000001177191734, 1);
 }
+
+
 .ldr-frame { 
 	width:80px;
 	height:72px;
