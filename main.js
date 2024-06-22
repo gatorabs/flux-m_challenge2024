@@ -1,5 +1,5 @@
 import {initializeChart, addDataToChart} from './js_scripts/chart.js'
-import {firebaseRef1, firebaseRef2, firebaseRef3, firebaseRef4, firebaseRef5, firebaseRef6, firebaseRef7} from './js_scripts/config_firebase.js'
+import {firebaseRef1, firebaseRef2, firebaseRef3, firebaseRef4, firebaseRef5, firebaseRef6, firebaseRef7, firebaseRef8,firebaseRef9} from './js_scripts/config_firebase.js'
 import {updateValues} from './js_scripts/getData.js'
 import {listen_gyro} from './js_scripts/getGyroscopeData.js'
 
@@ -28,6 +28,9 @@ function updateChartFromFirebase(firebaseRef, chart) {
   updateValues(firebaseRef5, document.querySelector('.radians-x'));
   updateValues(firebaseRef6, document.querySelector('.radians-y'));
   updateValues(firebaseRef7, document.querySelector('.radians-z'));
+
+  updateValues(firebaseRef8, document.querySelector('.fire-data'));
+  updateValues(firebaseRef9, document.querySelector('.density-data'));
 
 
 

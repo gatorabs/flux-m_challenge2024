@@ -46,7 +46,7 @@
 	width:54px;
 	height:38px;
 	position:absolute;
-	left:26px;
+	left:25px;
 	top:172px;
 	font-family:Jura;
 	text-align:left;
@@ -107,7 +107,7 @@
 	background-repeat:no-repeat;
 	background-size:cover;
 }
-.e39_49 { 
+.density-data { 
 	color:rgba(255, 255, 255, 1);
 	width:92px;
 	height:76px;
@@ -580,3 +580,14 @@
 	border-bottom-left-radius:6px;
 	border-bottom-right-radius:6px;
 }
+
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  .blink {
+    animation: blink 1s steps(5, start) 2; /* Blinks twice in one second */
+  }

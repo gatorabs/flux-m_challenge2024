@@ -6,6 +6,7 @@ export function updateValues(firebaseRef, dataTag) {
       'metangas-data': (data) => `${data}%`,
       'ldr-data': (data) => `${data}%`,
       'fire-data': (data) => data === true ? "Ok." : "FIRE!",
+      'density-data': (data) => `${data} kg/m³`,
       'gyro-x': (data) => `${data}°`,
       'gyro-y': (data) => `${data}°`,
       'gyro-z': (data) => `${data}°`,
@@ -17,15 +18,19 @@ export function updateValues(firebaseRef, dataTag) {
     };
     firebaseRef.on('value', function (snapshot) {
       var data = snapshot.val();
-      data = snapshot.val();
       const updateFunction = dataMapping[dataTag.className];
-
+  
       console.log(data);
-
+  
       dataTag.innerHTML = updateFunction(data);
+      
 
+      dataTag.classList.add('blink');
+      setTimeout(() => {
+        dataTag.classList.remove('blink');
+      }, 200); 
     });
-
+  
   }
 
   

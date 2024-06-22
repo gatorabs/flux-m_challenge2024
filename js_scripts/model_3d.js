@@ -1,7 +1,7 @@
 let scene, camera, renderer, object;
 let rotationX = 0;
 let rotationY = 0;
-
+let rotationZ = 0;
 function init() {
   const container = document.getElementById('3Dcube');
 
@@ -10,7 +10,7 @@ function init() {
 
   const aspectRatio = 481 / 458;
   camera = new THREE.PerspectiveCamera(75, aspectRatio, 0.1, 1000);
-  camera.position.set(0, 0, 20);
+  camera.position.set(0, 0, 22);
 
   
   renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -71,6 +71,7 @@ function animate() {
   if (object) {
     object.rotation.x = rotationX;
     object.rotation.y = rotationY;
+    object.rotation.z = rotationZ;
   }
 
   
@@ -89,4 +90,8 @@ export function setRotationX(value) {
 
 export function setRotationY(value) {
   rotationY = value;
+}
+
+export function setRotationZ(value) {
+  rotationZ = value;
 }
