@@ -1,8 +1,7 @@
 import {initializeChart, addDataToChart} from './js_scripts/chart.js'
 import {firebaseRef1, firebaseRef2, firebaseRef3, firebaseRef4, firebaseRef5} from './js_scripts/config_firebase.js'
-import {listen_gyro, init3D} from './js_scripts/3dmodel.js'
 import {updateValues} from './js_scripts/getData.js'
-
+import {listen_gyro} from './js_scripts/getGyroscopeData.js'
 
 function updateChartFromFirebase(firebaseRef, chart) {
   firebaseRef.on('value', function (snapshot) {
@@ -16,8 +15,8 @@ function updateChartFromFirebase(firebaseRef, chart) {
   var chart3 = initializeChart('chart_3', 'Metan Gas', 'rgba(255, 255, 255, 0.5)', 'rgba(255, 255, 255, 1)');
   var chart4 = initializeChart('chart_4', 'LDR', 'rgba(255, 255, 0, 0.5)', 'rgba(255, 255, 0, 1)');
 
-  listen_gyro();
-  init3D();
+  //listen_gyro();
+  //init3D();
 
   updateValues(firebaseRef1, document.querySelector('.temperature-data'));
   updateValues(firebaseRef2, document.querySelector('.humidity-data'));
@@ -29,4 +28,5 @@ function updateChartFromFirebase(firebaseRef, chart) {
   updateChartFromFirebase(firebaseRef2, chart2);
   updateChartFromFirebase(firebaseRef3, chart3);
   updateChartFromFirebase(firebaseRef4, chart4);
+  listen_gyro();
 
