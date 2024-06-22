@@ -19,3 +19,5 @@ const firebaseConfig = {
   export var firebaseRef3 = firebase.database().ref("MQ4");
   export var firebaseRef4 = firebase.database().ref("LDR");
   export var firebaseRef5 = firebase.database().ref("GYRO/x");
+  export var firebaseRef6 = firebase.database().ref("GYRO/y");
+  export var firebaseRef7 = firebase.database().ref("GYRO/z");

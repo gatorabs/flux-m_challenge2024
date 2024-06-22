@@ -5,7 +5,14 @@ export function updateValues(firebaseRef, dataTag) {
       'temperature-data': (data) => `${data} °C`,
       'metangas-data': (data) => `${data}%`,
       'ldr-data': (data) => `${data}%`,
-      'fire-data': (data) => data === true ? "Ok." : "FIRE!"
+      'fire-data': (data) => data === true ? "Ok." : "FIRE!",
+      'gyro-x': (data) => `${data}°`,
+      'gyro-y': (data) => `${data}°`,
+      'gyro-z': (data) => `${data}°`,
+      'radians-x': (data) => `${(data * (180 / Math.PI)).toFixed(0)}π`,
+      'radians-y': (data) => `${(data * (180 / Math.PI)).toFixed(0)}π`,
+      'radians-z': (data) => `${(data * (180 / Math.PI)).toFixed(0)}π`
+
 
     };
     firebaseRef.on('value', function (snapshot) {

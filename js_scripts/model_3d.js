@@ -8,13 +8,13 @@ function init() {
   
   scene = new THREE.Scene();
 
-  const aspectRatio = 430 / 445; // Proporção de 430x445 pixels
+  const aspectRatio = 481 / 458;
   camera = new THREE.PerspectiveCamera(75, aspectRatio, 0.1, 1000);
-  camera.position.set(0, 0, 25);
+  camera.position.set(0, 0, 20);
 
   
   renderer = new THREE.WebGLRenderer({ antialias: true });
-  renderer.setSize(430, 445);
+  renderer.setSize(481, 458);
   renderer.setClearColor(0x2C2C2C);
   container.appendChild(renderer.domElement);
 
@@ -42,7 +42,7 @@ function init() {
 
     
     object = new THREE.Mesh(geometry, material);
-    object.position.set(0, 0, 0);
+    object.position.set(0, 1.5, 0);
     object.scale.set(0.1, 0.1, 0.1);
     scene.add(object);
     console.log('Objeto adicionado à cena:', object);
@@ -57,10 +57,10 @@ function init() {
 
 function onWindowResize() {
   const container = document.getElementById('3Dcube');
-  const aspectRatio = 430 / 445;
+  const aspectRatio = 481 / 458;
   camera.aspect = aspectRatio;
   camera.updateProjectionMatrix();
-  renderer.setSize(430, 445);
+  renderer.setSize(481, 458);
 }
 
 
@@ -77,7 +77,7 @@ function animate() {
   renderer.render(scene, camera);
 }
 
-// Iniciar a cena e animação
+
 init();
 animate();
 

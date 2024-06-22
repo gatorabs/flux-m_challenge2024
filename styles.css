@@ -161,26 +161,8 @@
 	background-repeat:no-repeat;
 	background-size:cover;
 }
-.e40_59 { 
-	width:480px;
-	height:696px;
-	position:absolute;
-	left:567px;
-	top:37px;
-}
-.e39_39 { 
-	box-shadow:0px 4px 6.300000190734863px rgba(0, 0, 0, 0.4000000059604645);
-	background-color:rgba(43.81907768547535, 43.81907768547535, 43.81907768547535, 1);
-	width:480px;
-	height:698px;
-	position:absolute;
-	left:0px;
-	top:-2px;
-	border-top-left-radius:6px;
-	border-top-right-radius:6px;
-	border-bottom-left-radius:6px;
-	border-bottom-right-radius:6px;
-}
+
+
 .cube-content { 
 	width:425px;
 	height:440px;
@@ -188,18 +170,7 @@
 	left:28px;
 	top:237px;
 }
-.e39_44 { 
-	background-color:rgba(63.13726767897606, 63.13726767897606, 63.13726767897606, 1);
-	width:430px;
-	height:445px;
-	position:absolute;
-	left:-2px;
-	top:0px;
-	border-top-left-radius:12px;
-	border-top-right-radius:12px;
-	border-bottom-left-radius:12px;
-	border-bottom-right-radius:12px;
-}
+
 .ldr-chart { 
 	width:400px;
 	height:219px;
@@ -443,4 +414,169 @@
 	background-image:url(images/scania_logo.png);
 	background-repeat:no-repeat;
 	background-size:cover;
+}
+
+
+
+
+
+
+
+.e49_16 { 
+	width:480px;
+	height:696px;
+	position:absolute;
+	left:567px;
+	top:37px;
+}
+.e49_19 { 
+	width:480px;
+	height:219px;
+	position:absolute;
+	left:1px;
+	top:477px;
+}
+.e49_4 { 
+	box-shadow:0px 4px 6.300000190734863px rgba(0, 0, 0, 0.4000000059604645);
+	background-color:rgba(43.81907768547535, 43.81907768547535, 43.81907768547535, 1);
+	width:481px;
+	height:219px;
+	position:absolute;
+	left:-1px;
+	top:0px;
+	border-top-left-radius:6px;
+	border-top-right-radius:6px;
+	border-bottom-left-radius:6px;
+	border-bottom-right-radius:6px;
+}
+.radians-x { 
+	color:rgba(255, 255, 255, 1);
+	width:44px;
+	height:47px;
+	position:absolute;
+	left:327px;
+	top:9px;
+	font-family:Jura;
+	text-align:left;
+	font-size:40px;
+	letter-spacing:0;
+}
+.radians-y { 
+	color:rgba(255, 255, 255, 1);
+	width:44px;
+	height:47px;
+	position:absolute;
+	left:327px;
+	top:81px;
+	font-family:Jura;
+	text-align:left;
+	font-size:40px;
+	letter-spacing:0;
+}
+.radians-z { 
+	color:rgba(255, 255, 255, 1);
+	width:44px;
+	height:47px;
+	position:absolute;
+	left:327px;
+	top:153px;
+	font-family:Jura;
+	text-align:left;
+	font-size:40px;
+	letter-spacing:0;
+}
+.gyro-x { 
+	color:rgba(255, 255, 255, 1);
+	width:76px;
+	height:47px;
+	position:absolute;
+	left:202px;
+	top:9px;
+	font-family:Jura;
+	text-align:left;
+	font-size:40px;
+	letter-spacing:0;
+}
+.gyro-y { 
+	color:rgba(255, 255, 255, 1);
+	width:76px;
+	height:47px;
+	position:absolute;
+	left:202px;
+	top:81px;
+	font-family:Jura;
+	text-align:left;
+	font-size:40px;
+	letter-spacing:0;
+}
+.gyro-z { 
+	color:rgba(255, 255, 255, 1);
+	width:76px;
+	height:47px;
+	position:absolute;
+	left:202px;
+	top:153px;
+	font-family:Jura;
+	text-align:left;
+	font-size:40px;
+	letter-spacing:0;
+}
+.e49_12 { 
+	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	color:rgba(154.0625050663948, 148.41356098651886, 97.57291987538338, 1);
+	width:36px;
+	height:47px;
+	position:absolute;
+	left:109px;
+	top:9px;
+	font-family:Jura;
+	text-align:left;
+	font-size:40px;
+	letter-spacing:0;
+}
+.e49_13 { 
+	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	color:rgba(154.0625050663948, 148.41356098651886, 97.57291987538338, 1);
+	width:33px;
+	height:47px;
+	position:absolute;
+	left:109px;
+	top:81px;
+	font-family:Jura;
+	text-align:left;
+	font-size:40px;
+	letter-spacing:0;
+}
+.e49_14 { 
+	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	color:rgba(154.0625050663948, 148.41356098651886, 97.57291987538338, 1);
+	width:39px;
+	height:47px;
+	position:absolute;
+	left:109px;
+	top:153px;
+	font-family:Jura;
+	text-align:left;
+	font-size:40px;
+	letter-spacing:0;
+}
+.e49_17 { 
+	width:482px;
+	height:458px;
+	position:absolute;
+	left:-1px;
+	top:-1px;
+}
+.e49_3 { 
+	box-shadow:0px 4px 6.300000190734863px rgba(0, 0, 0, 0.4000000059604645);
+	background-color:rgba(43.81907768547535, 43.81907768547535, 43.81907768547535, 1);
+	width:481px;
+	height:458px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	border-top-left-radius:6px;
+	border-top-right-radius:6px;
+	border-bottom-left-radius:6px;
+	border-bottom-right-radius:6px;
 }
