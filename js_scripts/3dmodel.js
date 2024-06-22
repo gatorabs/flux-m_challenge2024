@@ -30,7 +30,7 @@ export function init3D() {
   document.getElementById('3Dcube').appendChild(renderer.domElement);
 
 
-  const geometry = new THREE.BoxGeometry(5, 1, 4);
+  const geometry = new THREE.BoxGeometry(3, 1, 2);
 
 
   var cubeMaterials = [
