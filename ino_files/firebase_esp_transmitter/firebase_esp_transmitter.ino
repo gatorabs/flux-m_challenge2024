@@ -10,16 +10,15 @@
 #include "addons/TokenHelper.h"
 #include "addons/RTDBHelper.h"
 
-#define DHTPIN 33
-#define MQ3_PIN 13
-#define MQ4_PIN 32
-#define FIRE_SENSOR 26
-#define LASER_PIN 15
-#define LDR_PIN 34
+#define DHTPIN 2
+#define MQ3_PIN 26
+#define MQ4_PIN 34
+#define FIRE_SENSOR 15
+#define LDR_PIN 32
 DHTesp dht;
 
-#define WIFI_SSID "VIVOFIBRA-18B6"
-#define WIFI_PASSWORD "3dd92218b6"
+#define WIFI_SSID "FIAP-DINO"
+#define WIFI_PASSWORD "dino#2017"
 #define API_KEY "AIzaSyBbZHqxDbojbNKaDfLs7uR9NR84MzQEMQw" //project config
                                                           //don't forget to set the anonymous login (authentication tab) 
 #define DATABASE_URL "https://flux-m-cca2f-default-rtdb.firebaseio.com/" //copy past over the realtime data base
@@ -35,7 +34,7 @@ bool is_laserOn = true;
 void setup(){
   
   dht.setup(DHTPIN, DHTesp::DHT11);
-  pinMode(LASER_PIN, OUTPUT);
+  
   pinMode(FIRE_SENSOR, INPUT);
   pinMode(MQ3_PIN, OUTPUT);
   Serial.begin(115200);
@@ -82,25 +81,26 @@ if (currentMillis - previousMillis >= 100) {
   float humidity = dht.getHumidity();
   float temperature = dht.getTemperature();
   int ldr_reading = analogRead(LDR_PIN);
+  int ldr_mapping = map(ldr_reading, 0, 3000, 0, 100);
   int mq4_reading = analogRead(MQ4_PIN);
-  int mq4_mapping = map(mq4_reading, 0, 1023, 0, 100);
+  int mq4_mapping = map(mq4_reading, 0, 2500, 0, 100);
   int fire_sensor_reading = digitalRead(FIRE_SENSOR);
   
-  digitalWrite(LASER_PIN, HIGH);
+  
   
   //bool alchool_sensor_reading = digitalRead(MQ3_PIN);
   
-  //Serial.println(fire_sensor_reading);
+  Serial.println(mq4_reading);
   
   
 
   
   //dht_sensor_fb(temperature, humidity);
   firebase_sending_function("MQ4", mq4_mapping);
-  firebase_sending_function("LDR", ldr_reading);
+  firebase_sending_function("LDR", ldr_mapping);
   firebase_sending_function("DHT11/Temperature", temperature);
   firebase_sending_function("DHT11/Humidity", humidity);
-  firebase_sending_function("FIRE", humidity);
+  firebase_sending_function("FIRE", fire_sensor_reading);
 
   
   
