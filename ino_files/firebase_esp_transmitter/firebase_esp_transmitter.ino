@@ -96,71 +96,23 @@ if (currentMillis - previousMillis >= 100) {
 
   
   //dht_sensor_fb(temperature, humidity);
-  mq4_sensor_fb(mq4_mapping);
-  ldr_fb(ldr_reading);
-  fire_sensor_fb(fire_sensor_reading);
+  firebase_sending_function("MQ4", mq4_mapping);
+  firebase_sending_function("LDR", ldr_reading);
+  firebase_sending_function("DHT11/Temperature", temperature);
+  firebase_sending_function("DHT11/Humidity", humidity);
+  firebase_sending_function("FIRE", humidity);
+
   
-  //alchool_sensor_fb(alchool_sensor_reading);
   
   }
 
 }
-void mq4_sensor_fb(int mq4_sensor){
-  if (Firebase.RTDB.setInt(&fbdo, "MQ4", mq4_sensor)){
-      Serial.print("MQ4 : ");
-      Serial.println(mq4_sensor);
-    }
-    else {
-      Serial.println("Failed to Read from the Sensor");
-      Serial.println("REASON: " + fbdo.errorReason());
-    }
-}
-void ldr_fb(int ldr_sensor){
-    if (Firebase.RTDB.setInt(&fbdo, "LDR", ldr_sensor)){
-      Serial.print("LDR : ");
-      Serial.println(ldr_sensor);
-    }
-    else {
-      Serial.println("Failed to Read from the Sensor");
-      Serial.println("REASON: " + fbdo.errorReason());
-    }
-}
-void fire_sensor_fb(bool fire_sensor){
-  if (Firebase.RTDB.setInt(&fbdo, "FIRE", fire_sensor)){
-      Serial.print("Fire : ");
-      Serial.println(fire_sensor);
-    }
-    else {
-      Serial.println("Failed to Read from the Sensor");
-      Serial.println("REASON: " + fbdo.errorReason());
-    }
-}
-void alchool_sensor_fb(bool alchool_sensor){
-  if (Firebase.RTDB.setInt(&fbdo, "MQ3", alchool_sensor)){
-      Serial.print("Alchool : ");
-      Serial.println(alchool_sensor );
-    }
-    else {
-      Serial.println("Failed to Read from the Sensor");
-      Serial.println("REASON: " + fbdo.errorReason());
-    }
-}
 
-void dht_sensor_fb(float temperature, float humidity){
-  if (Firebase.RTDB.setFloat(&fbdo, "DHT11/Temperature", temperature)){
-      Serial.print("Temperature : ");
-      Serial.println(temperature);
-    }
-    else {
-      Serial.println("Failed to Read from the Sensor");
-      Serial.println("REASON: " + fbdo.errorReason());
-    }
 
-    
-    
-    if (Firebase.RTDB.setFloat(&fbdo, "DHT11/Humidity", humidity)){
-      Serial.print("Humidity : ");
-      Serial.println(humidity);
+void firebase_sending_function(String firebase_ref, int sensor_ref){
+  if (Firebase.RTDB.setInt(&fbdo, firebase_ref, sensor_ref)){
+      Serial.print(firebase_ref + ":");
+      Serial.println(sensor_ref);
     }
     else {
       Serial.println("Failed to Read from the Sensor");
