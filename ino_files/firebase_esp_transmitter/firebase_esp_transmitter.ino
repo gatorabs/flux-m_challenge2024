@@ -88,7 +88,7 @@ unsigned long previousMillis = 0;
 void loop(){
  unsigned long currentMillis = millis(); 
 
- if (currentMillis - previousMillis >= 100) {
+ if (currentMillis - previousMillis >= 1) {
    previousMillis = currentMillis;
    float humidity = dht.getHumidity();
    float temperature = dht.getTemperature();
@@ -101,8 +101,10 @@ void loop(){
    int mq4_mapping = map(mq4_reading, 0, 2500, 0, 100);
     
    int fire_sensor_reading = digitalRead(FIRE_SENSOR);
-   gyroscope_reading();
    
+   gyroscope_reading();
+   int AcX_mapping = map(AcX, -12000,12000,0,180);
+   int AcY_mapping = map(AcY, -12000,12000,0,180);
     
    firebase_sending_function("MQ4", mq4_mapping);
    firebase_sending_function("LDR", ldr_mapping);
@@ -110,9 +112,9 @@ void loop(){
    firebase_sending_function("DHT11/Humidity", humidity);
    firebase_sending_function("FIRE", fire_sensor_reading);
    
-   firebase_sending_function("GYRO/x", GyX);
-   firebase_sending_function("GYRO/y", GyY);
-   firebase_sending_function("GYRO/z", GyZ);
+   firebase_sending_function("GYRO/x", AcY_mapping);
+   firebase_sending_function("GYRO/y", AcX_mapping);
+   //firebase_sending_function("GYRO/z", GyZ);
     
    firebase_sending_function("MQ3", MQ3_PIN);
  }
