@@ -11,6 +11,7 @@
 #include "addons/TokenHelper.h"
 #include "addons/RTDBHelper.h"
 
+#define MPU 0x68
 #define DHTPIN 2
 #define MQ3_PIN 26
 #define MQ4_PIN 34
