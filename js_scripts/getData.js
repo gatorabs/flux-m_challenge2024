@@ -10,9 +10,9 @@ export function updateValues(firebaseRef, dataTag) {
       'gyro-x': (data) => `${data}°`,
       'gyro-y': (data) => `${data}°`,
       'gyro-z': (data) => `${data}°`,
-      'radians-x': (data) => `${(data * (180 / Math.PI)).toFixed(0)}π`,
-      'radians-y': (data) => `${(data * (180 / Math.PI)).toFixed(0)}π`,
-      'radians-z': (data) => `${(data * (180 / Math.PI)).toFixed(0)}π`
+      'radians-x': (data) => `${(data * (Math.PI / 180)).toFixed(2)}π`,
+      'radians-y': (data) => `${(data * (Math.PI / 180)).toFixed(2)}π`,
+      'radians-z': (data) => `${(data * (Math.PI / 180)).toFixed(2)}π`
 
 
     };
