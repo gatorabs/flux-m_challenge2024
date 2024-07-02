@@ -23,3 +23,4 @@ const firebaseConfig = {
   export var firebaseRef7 = firebase.database().ref("GYRO/z");
   export var firebaseRef8 = firebase.database().ref("FIRE");
   export var firebaseRef9 = firebase.database().ref("DENSITY");
+  export var firebaseRef10 = firebase.database().ref("LDR_pure");

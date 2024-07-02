@@ -1,4 +1,4 @@
-import { firebaseRef3, firebaseRef4 } from "../js_scripts/config_firebase.js";
+import { firebaseRef3, firebaseRef4,firebaseRef10 } from "../js_scripts/config_firebase.js";
 import { updateValues } from "../js_scripts/getData.js"
 import {initializeChart, addDataToChart} from '../js_scripts/chart.js'
 
@@ -20,6 +20,12 @@ var chart_3 = initializeChart('polarArea', 'chart3', 'Metan Gas & LDR', 'rgba(25
 
 updateValues(firebaseRef4, document.querySelector('.ldr-data'));
 updateValues(firebaseRef3, document.querySelector('.metangas-data'));
+updateValues(firebaseRef10, document.querySelector('.non-fluid-data'));
+updateValues(firebaseRef10, document.querySelector('.water-fluid-data'));
+updateValues(firebaseRef10, document.querySelector('.diesel-fluid-data'));
+updateValues(firebaseRef10, document.querySelector('.oil-fluid-data'));
+
+
 
 updateChartFromFirebase(firebaseRef4, chart_1);
 updateChartFromFirebase(firebaseRef3, chart_2);

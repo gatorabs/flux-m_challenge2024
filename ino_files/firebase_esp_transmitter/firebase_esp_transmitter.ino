@@ -7,7 +7,7 @@
 #include <WiFi.h>               
 #include <Firebase_ESP_Client.h>
 #include <DHTesp.h> 
-#include<Wire.h>              
+#include  <Wire.h>              
 #include "addons/TokenHelper.h"
 #include "addons/RTDBHelper.h"
 
@@ -108,12 +108,14 @@ void loop(){
     
    firebase_sending_function("MQ4", mq4_mapping);
    firebase_sending_function("LDR", ldr_mapping);
+   firebase_sending_function("LDR_pure", ldr_reading);
+
    firebase_sending_function("DHT11/Temperature", temperature);
    firebase_sending_function("DHT11/Humidity", humidity);
    firebase_sending_function("FIRE", fire_sensor_reading);
    
-   firebase_sending_function("GYRO/x", AcY_mapping);
-   firebase_sending_function("GYRO/y", AcX_mapping);
+   firebase_sending_function("GYRO/x", AcY_mapping-90);
+   firebase_sending_function("GYRO/y", AcX_mapping-90);
    //firebase_sending_function("GYRO/z", GyZ);
     
    firebase_sending_function("MQ3", MQ3_PIN);

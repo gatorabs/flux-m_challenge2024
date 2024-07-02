@@ -12,9 +12,11 @@ export function updateValues(firebaseRef, dataTag) {
       'gyro-z': (data) => `${data}°`,
       'radians-x': (data) => `${(data * (Math.PI / 180)).toFixed(2)}π`,
       'radians-y': (data) => `${(data * (Math.PI / 180)).toFixed(2)}π`,
-      'radians-z': (data) => `${(data * (Math.PI / 180)).toFixed(2)}π`
-      
-
+      'radians-z': (data) => `${(data * (Math.PI / 180)).toFixed(2)}π`,
+      'non-fluid-data': (data) => `${data}`,
+      'water-fluid-data': (data) => `${data}`,
+      'diesel-fluid-data': (data) => `${data}`,
+      'oil-fluid-data': (data) => `${data}`
     };
     firebaseRef.on('value', function (snapshot) {
       var data = snapshot.val();
