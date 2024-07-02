@@ -18,12 +18,12 @@
 	box-shadow:0px 4px 6.300000190734863px rgba(0, 0, 0, 0.4000000059604645);
 	background-color:rgba(43.81907768547535, 43.81907768547535, 43.81907768547535, 1);
 	width:105px;
-	height:281px;
+	height:355px;
 	position:absolute;
 	left:0px;
-	top:1px;
-	border-top-left-radius:25px;
-	border-top-right-radius:25px;
+	top:-18px;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
 	border-bottom-left-radius:25px;
 	border-bottom-right-radius:25px;
 }
@@ -74,12 +74,12 @@
 	box-shadow:0px 4px 6.300000190734863px rgba(0, 0, 0, 0.4000000059604645);
 	background-color:rgba(43.81907768547535, 43.81907768547535, 43.81907768547535, 1);
 	width:105px;
-	height:281px;
+	height:355px;
 	position:absolute;
 	left:3px;
-	top:-1px;
-	border-top-left-radius:25px;
-	border-top-right-radius:25px;
+	top:-20px;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
 	border-bottom-left-radius:25px;
 	border-bottom-right-radius:25px;
 }
@@ -134,10 +134,10 @@
 	position:absolute;
 	left:-1px;
 	top:0px;
-	border-top-left-radius:34px;
-	border-top-right-radius:34px;
-	border-bottom-left-radius:34px;
-	border-bottom-right-radius:34px;
+	border-top-left-radius:6px;
+	border-top-right-radius:6px;
+	border-bottom-left-radius:6px;
+	border-bottom-right-radius:6px;
 }
 .temperature-data { 
 	color:rgba(255, 255, 255, 1);
@@ -410,7 +410,7 @@
 	height:210px;
 	position:absolute;
 	left:1073px;
-	top:475px;
+	top:514px;
 	background-image:url(images/scania_logo.png);
 	background-repeat:no-repeat;
 	background-size:cover;
