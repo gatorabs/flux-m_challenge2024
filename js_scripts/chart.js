@@ -1,7 +1,7 @@
-export function initializeChart(chartId, label, backgroundColor, borderColor) {
+export function initializeChart(type, chartId, label, backgroundColor, borderColor) {
     var ctx = document.getElementById(chartId).getContext('2d');
     return new Chart(ctx, {
-      type: 'line',
+      type: type,
       data: {
         labels: [],
         datasets: [{

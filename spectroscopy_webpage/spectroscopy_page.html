@@ -7,9 +7,11 @@
   <meta name="Flux - m" content="Flux - m">
   <meta name="gabs" content="Flux - m">
   <link href="https://fonts.googleapis.com/css?family=Jura&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css">
-
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+  <link rel="stylesheet" href="./styles_Spectroscopy.css">
+  <script src="./spectroscopy_data.js" type="module"></script>
   <style>
  
     body {
@@ -23,21 +25,30 @@
   <div class=e8_25>
     <div class=e59_30>
       <div class="e59_31"></div>
-      <div class="e59_32"></div>
+      <div class="ldr-reading-image"></div>
+      
+
       <div class="e59_33"></div>
-      <div class="ldr-reading-data">30%</div>
+      <a href="../index.html" class="e59_33"></a>
+      
+      <div class="ldr-data">30%</div>
     </div>
     <div class=e40_57>
-      <div class="e38_23"></div>
+      <div class="ldr-graphic-data">
+        <canvas id="chart1" width="400" height="220"></canvas>
+      </div>
     </div>
     <div class=e59_149>
       <div class="e59_150"></div>
       <div class="e59_152"></div>
-      <div class="mq4-reading-data">30%</div>
+      <div class="metangas-data">30%</div>
       <div class="e59_165"></div>
     </div>
     <div class=e59_147>
-      <div class="e59_148"></div>
+      <div class="e59_148">
+        <canvas id="chart2" width="400" height="220"></canvas>
+
+      </div>
     </div>
     <div class=e59_166>
       <div class="e59_78"></div>
@@ -96,7 +107,10 @@
       <div class="e69_16"></div>
       <div class="e69_17"></div>
     </div>
-    <div class="e59_14"></div>
+    <div class="e59_14">
+      <canvas id="chart3" width="517" height="404"></canvas>
+
+    </div>
   </div>
 </body>
 

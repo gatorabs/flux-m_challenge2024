@@ -3,6 +3,7 @@ import {firebaseRef1, firebaseRef2, firebaseRef3, firebaseRef4, firebaseRef5, fi
 import {updateValues} from './js_scripts/getData.js'
 import {listen_gyro} from './js_scripts/getGyroscopeData.js'
 
+
 function updateChartFromFirebase(firebaseRef, chart) {
   firebaseRef.on('value', function (snapshot) {
     const data = snapshot.val();
@@ -11,9 +12,9 @@ function updateChartFromFirebase(firebaseRef, chart) {
   });
 }
 
-  var chart2 = initializeChart('chart_2', 'Humidity', 'rgba(0, 255, 255, 0.5)', 'rgba(0, 255, 255, 1)');
-  var chart3 = initializeChart('chart_3', 'Metan Gas', 'rgba(255, 255, 255, 0.5)', 'rgba(255, 255, 255, 1)');
-  var chart4 = initializeChart('chart_4', 'LDR', 'rgba(255, 255, 0, 0.5)', 'rgba(255, 255, 0, 1)');
+  var chart2 = initializeChart('line', 'chart_2', 'Humidity', 'rgba(0, 255, 255, 0.5)', 'rgba(0, 255, 255, 1)');
+  var chart3 = initializeChart('line', 'chart_3', 'Metan Gas', 'rgba(255, 255, 255, 0.5)', 'rgba(255, 255, 255, 1)');
+  var chart4 = initializeChart('line', 'chart_4', 'LDR', 'rgba(255, 255, 0, 0.5)', 'rgba(255, 255, 0, 1)');
 
 
   updateValues(firebaseRef1, document.querySelector('.temperature-data'));
@@ -32,11 +33,10 @@ function updateChartFromFirebase(firebaseRef, chart) {
   updateValues(firebaseRef8, document.querySelector('.fire-data'));
   updateValues(firebaseRef9, document.querySelector('.density-data'));
 
-
-
-
   updateChartFromFirebase(firebaseRef2, chart2);
   updateChartFromFirebase(firebaseRef3, chart3);
   updateChartFromFirebase(firebaseRef4, chart4);
+
+  
   listen_gyro();
 

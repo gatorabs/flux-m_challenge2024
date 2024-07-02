@@ -27,7 +27,7 @@
 	border-bottom-left-radius:6px;
 	border-bottom-right-radius:6px;
 }
-.e59_32 { 
+.ldr-reading-image { 
 	width:72px;
 	height:80px;
 	position:absolute;
@@ -51,7 +51,7 @@
 	border-bottom-left-radius:9px;
 	border-bottom-right-radius:9px;
 }
-.ldr-reading-data { 
+.ldr-data { 
 	color:rgba(255, 255, 255, 1);
 	width:75px;
 	height:47px;
@@ -70,7 +70,7 @@
 	left:272px;
 	top:60px;
 }
-.e38_23 { 
+.ldr-graphic-data { 
 	box-shadow:0px 4px 6.300000190734863px rgba(0, 0, 0, 0.4000000059604645);
 	background-color:rgba(43.81907768547535, 43.81907768547535, 43.81907768547535, 1);
 	width:400px;
@@ -117,7 +117,7 @@
 	border-bottom-left-radius:9px;
 	border-bottom-right-radius:9px;
 }
-.mq4-reading-data { 
+.metangas-data { 
 	color:rgba(255, 255, 255, 1);
 	width:75px;
 	height:47px;

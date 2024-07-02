@@ -13,7 +13,7 @@ export function updateValues(firebaseRef, dataTag) {
       'radians-x': (data) => `${(data * (Math.PI / 180)).toFixed(2)}π`,
       'radians-y': (data) => `${(data * (Math.PI / 180)).toFixed(2)}π`,
       'radians-z': (data) => `${(data * (Math.PI / 180)).toFixed(2)}π`
-
+      
 
     };
     firebaseRef.on('value', function (snapshot) {
