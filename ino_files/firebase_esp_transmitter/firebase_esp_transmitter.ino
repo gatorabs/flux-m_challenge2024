@@ -94,11 +94,11 @@ void loop(){
    float temperature = dht.getTemperature();
     
    int ldr_reading = analogRead(LDR_PIN);
-   int ldr_mapping = map(ldr_reading, 0, 3000, 0, 100);
+   int ldr_mapping = map(ldr_reading, 0, 4095, 0, 100);
    int mq3_reading = digitalRead(MQ3_PIN);
     
    int mq4_reading = analogRead(MQ4_PIN);
-   int mq4_mapping = map(mq4_reading, 0, 2500, 0, 100);
+   int mq4_mapping = map(mq4_reading, 2000, 4095, 0, 100);
     
    int fire_sensor_reading = digitalRead(FIRE_SENSOR);
    

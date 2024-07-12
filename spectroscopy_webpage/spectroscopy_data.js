@@ -29,5 +29,5 @@ updateValues(firebaseRef10, document.querySelector('.oil-fluid-data'));
 
 updateChartFromFirebase(firebaseRef4, chart_1);
 updateChartFromFirebase(firebaseRef3, chart_2);
-updateChartFromFirebase(firebaseRef4, chart_3);
+updateChartFromFirebase(firebaseRef3, chart_3);
 

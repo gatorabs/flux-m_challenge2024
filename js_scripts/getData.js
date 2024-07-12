@@ -30,7 +30,7 @@ export function updateValues(firebaseRef, dataTag) {
       dataTag.classList.add('blink');
       setTimeout(() => {
         dataTag.classList.remove('blink');
-      }, 200); 
+      }, 300); 
     });
   
   }
