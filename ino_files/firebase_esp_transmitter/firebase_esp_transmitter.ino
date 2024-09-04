@@ -19,8 +19,10 @@
 #define LDR_PIN 32
 DHTesp dht;
 
-#define WIFI_SSID "FIAP-DINO"
-#define WIFI_PASSWORD "dino#2017"
+const char* wifi_ssid[] = {"FIAP-DINO", "Galaxyaa", "VIVOFIBRA-18B6"};
+const char* wifi_password[] = {"dino#2017", "banana123", "3dd92218b6"};
+
+
 #define API_KEY "AIzaSyBbZHqxDbojbNKaDfLs7uR9NR84MzQEMQw" //project config
                                                           //don't forget to set the anonymous login (authentication tab) 
 #define DATABASE_URL "https://flux-m-cca2f-default-rtdb.firebaseio.com/" //copy past over the realtime data base
@@ -50,16 +52,35 @@ void setup(){
   Wire.write(0);    
   Wire.endTransmission(true);
   
-  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
-  Serial.print("Connecting to Wi-Fi");
+  Serial.println("Selecione uma rede Wi-Fi:");
+  for (int i = 0; i < 3; i++) {
+    Serial.print(i + 1);
+    Serial.print(": ");
+    Serial.println(wifi_ssid[i]);
+  }
+
+  int escolha = 0;
+  while (escolha < 1 || escolha > 3) {
+    while (Serial.available() == 0) {
+      
+    }
+    escolha = Serial.parseInt();
+  }
+  
+
+  Serial.print("Conectando-se à rede: ");
+  Serial.println(wifi_ssid[escolha - 1]);
+  
+  WiFi.begin(wifi_ssid[escolha - 1], wifi_password[escolha - 1]);
+
   while (WiFi.status() != WL_CONNECTED){
     Serial.print(".");
     delay(300);
   }
-  Serial.println();
-  Serial.print("Connected with IP: ");
+
+  Serial.println("\nConectado!");
+  Serial.print("Endereço IP: ");
   Serial.println(WiFi.localIP());
-  Serial.println();
 
  
   /* Assign the api key (required) */
