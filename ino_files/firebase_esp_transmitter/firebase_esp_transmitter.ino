@@ -192,6 +192,8 @@ void connectToWiFi() {
     Serial.println("1 - Scannear Wi-Fi da Proximidade");
     Serial.println("2 - Conectar em Wi-Fi Salvos");
 
+    unsigned long startTime = millis(); 
+
     while (true) {
         if (Serial.available()) {
             int option = Serial.parseInt();
@@ -199,16 +201,34 @@ void connectToWiFi() {
 
             if (option == 1) {
                 scanWiFiNetworks();
-                break;
+                break; 
             } else if (option == 2) {
                 connectToSavedWiFi();
-                break;
+                break; 
             } else {
                 Serial.println("Opção inválida! Tente novamente.");
             }
         }
+
+        
+        if (millis() - startTime >= 3000) {
+            Serial.println("Nenhuma escolha feita em 3 segundos. Conectando à primeira rede salva...");
+            String ssid = wifi_ssid[0];
+            String password = wifi_password[0];
+            WiFi.begin(ssid.c_str(), password.c_str());
+
+            while (WiFi.status() != WL_CONNECTED) {
+                delay(500);
+                Serial.print(".");
+            }
+
+            Serial.println();
+            Serial.println("Conectado com sucesso!");
+            break; 
+        }
     }
 }
+
 
 void scanWiFiNetworks() {
     Serial.println("Scaneando redes Wi-Fi...");
