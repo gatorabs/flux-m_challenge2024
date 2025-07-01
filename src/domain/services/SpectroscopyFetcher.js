@@ -1,6 +1,6 @@
-import { firebaseRef3, firebaseRef4,firebaseRef10 } from "../js_scripts/config_firebase.js";
-import { updateValues } from "../js_scripts/getData.js"
-import {initializeChart, addDataToChart} from '../js_scripts/chart.js'
+import { firebaseRef3, firebaseRef4,firebaseRef10 } from "../../infrastructure/firebase/firebaseConfig.js";
+import { updateValues } from "../../domain/services/DataFetcher.js"
+import {initializeChart, addDataToChart} from '../../infrastructure/chart/ChartUpdater.js'
 
 
 function updateChartFromFirebase(firebaseRef, chart) {
@@ -10,9 +10,6 @@ function updateChartFromFirebase(firebaseRef, chart) {
       addDataToChart(chart, label, data);
     });
   }
-
-
-  
 
 var chart_1 = initializeChart('line', 'chart1', 'LDR', 'rgba(255, 255, 0, 0.5)', 'rgba(255, 255, 0, 1)');
 var chart_2 = initializeChart('line', 'chart2', 'Metan Gas', 'rgba(255, 255, 255, 0.5)', 'rgba(255, 255, 255, 1)');

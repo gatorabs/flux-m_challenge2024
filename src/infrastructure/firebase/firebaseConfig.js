@@ -9,10 +9,7 @@ const firebaseConfig = {
     measurementId: "G-5V6EKLSVCQ"
   };
 
-
-
   firebase.initializeApp(firebaseConfig);
-
 
   export var firebaseRef1 = firebase.database().ref("DHT11/Temperature");
   export var firebaseRef2 = firebase.database().ref("DHT11/Humidity");

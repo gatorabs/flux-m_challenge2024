@@ -33,7 +33,7 @@
 	position:absolute;
 	left:14px;
 	top:-1px;
-	background-image:url(images/luminosidade_2.png);
+	background-image:url(../assets/images/luminosidade_2.png);
 	background-repeat:no-repeat;
 	background-size:cover;
 }
@@ -135,7 +135,7 @@
 	position:absolute;
 	left:15px;
 	top:11px;
-	background-image:url(images/ch4_1_3.png);
+	background-image:url(../assets/images/ch4_1_3.png);
 	background-repeat:no-repeat;
 	background-size:cover;
 }
@@ -199,7 +199,7 @@
 	position:absolute;
 	left:21px;
 	top:21px;
-	background-image:url(images/conjunto_vazio_1.png);
+	background-image:url(../assets/images/conjunto_vazio_1.png);
 	background-repeat:no-repeat;
 	background-size:cover;
 }
@@ -223,7 +223,7 @@
 	position:absolute;
 	left:155px;
 	top:17px;
-	background-image:url(images/bebida_1.png);
+	background-image:url(../assets/images/bebida_1.png);
 	background-repeat:no-repeat;
 	background-size:cover;
 }
@@ -244,7 +244,7 @@
 	position:absolute;
 	left:297px;
 	top:20px;
-	background-image:url(images/combustivel_1.png);
+	background-image:url(../assets/images/combustivel_1.png);
 	background-repeat:no-repeat;
 	background-size:cover;
 }
@@ -268,7 +268,7 @@
 	position:absolute;
 	left:433px;
 	top:18px;
-	background-image:url(images/diesel__1__1.png);
+	background-image:url(../assets/images/diesel__1__1.png);
 	background-repeat:no-repeat;
 	background-size:cover;
 }
