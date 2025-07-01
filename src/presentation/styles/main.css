@@ -59,7 +59,7 @@
 	position:absolute;
 	left:16px;
 	top:57px;
-	background-image:url(images/fire_icon.png);
+	background-image:url(../assets/images/fire_icon.png);
 	background-repeat:no-repeat;
 	background-size:cover;
 }
@@ -103,7 +103,7 @@
 	position:absolute;
 	left:24px;
 	top:60px;
-	background-image:url(images/combustivel_1.png);
+	background-image:url(../assets/images/combustivel_1.png);
 	background-repeat:no-repeat;
 	background-size:cover;
 }
@@ -157,7 +157,7 @@
 	position:absolute;
 	left:19px;
 	top:15px;
-	background-image:url(images/temperatura_alta_1.png);
+	background-image:url(../assets/images/temperatura_alta_1.png);
 	background-repeat:no-repeat;
 	background-size:cover;
 }
@@ -273,7 +273,7 @@
 	position:absolute;
 	left:14px;
 	top:-1px;
-	background-image:url(images/luminosidade_2.png);
+	background-image:url(../assets/images/luminosidade_2.png);
 	background-repeat:no-repeat;
 	background-size:cover;
 	
@@ -333,7 +333,7 @@
 	position:absolute;
 	left:13px;
 	top:13px;
-	background-image:url(images/ch4_1.png);
+	background-image:url(../assets/images/ch4_1.png);
 	background-repeat:no-repeat;
 	background-size:cover;
 }
@@ -379,7 +379,7 @@
 	border-top-right-radius:25px;
 	border-bottom-left-radius:25px;
 	border-bottom-right-radius:25px;
-	background-image:url(images/gota_de_agua_2.png);
+	background-image:url(../assets/images/gota_de_agua_2.png);
 	background-repeat:no-repeat;
 	background-size:cover;
 }
@@ -415,16 +415,10 @@
 	position:absolute;
 	left:1073px;
 	top:514px;
-	background-image:url(images/scania_logo.png);
+	background-image:url(../assets/images/scania_logo.png);
 	background-repeat:no-repeat;
 	background-size:cover;
 }
-
-
-
-
-
-
 
 .e49_16 { 
 	width:480px;

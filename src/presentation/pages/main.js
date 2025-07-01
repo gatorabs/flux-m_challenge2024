@@ -1,7 +1,7 @@
-import {initializeChart, addDataToChart} from './js_scripts/chart.js'
-import {firebaseRef1, firebaseRef2, firebaseRef3, firebaseRef4, firebaseRef5, firebaseRef6, firebaseRef7, firebaseRef8,firebaseRef9} from './js_scripts/config_firebase.js'
-import {updateValues} from './js_scripts/getData.js'
-import {listen_gyro} from './js_scripts/getGyroscopeData.js'
+import {initializeChart, addDataToChart} from '../../infrastructure/chart/ChartUpdater.js'
+import {firebaseRef1, firebaseRef2, firebaseRef3, firebaseRef4, firebaseRef5, firebaseRef6, firebaseRef7, firebaseRef8,firebaseRef9} from '../../infrastructure/firebase/firebaseConfig.js'
+import {updateValues} from '../../domain/services/DataFetcher.js'
+import { listen_gyro } from '../../infrastructure/gyroscope/GyroListener.js';
 
 
 function updateChartFromFirebase(firebaseRef, chart) {

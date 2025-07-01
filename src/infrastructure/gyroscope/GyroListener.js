@@ -1,5 +1,5 @@
-import { firebaseRef5, firebaseRef6, firebaseRef7 } from "./config_firebase.js";
-import { setRotationX, setRotationY, setRotationZ } from "./model_3d.js"
+import { firebaseRef5, firebaseRef6, firebaseRef7 } from "../firebase/firebaseConfig.js";
+import { setRotationX, setRotationY, setRotationZ } from "../three/Model3D.js"
 export function listen_gyro(){
     var gyroX;
     var gyroY;
