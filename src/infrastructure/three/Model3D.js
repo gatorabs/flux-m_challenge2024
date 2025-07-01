@@ -28,7 +28,7 @@ function init() {
 
   // Carregar modelo STL
   const loader = new THREE.STLLoader();
-  loader.load('./AU20_Scania2.stl', function (geometry) {
+  loader.load('../../infrastructure/models/AU20_Scania2.stl', function (geometry) {
     console.log('STL carregado com sucesso');
     geometry.computeVertexNormals();
     
